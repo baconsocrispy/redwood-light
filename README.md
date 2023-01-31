@@ -1,70 +1,98 @@
-# Getting Started with Create React App
+## BASIC SETUP
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### SETUP CREATE-REACT-APP AND STYLED COMPONENTS
+Initialize Create-React-App
+* `npx create-react-app redwood-light-app`
 
-## Available Scripts
+Setup React Router to handle routing to Awards, Contact and Team pages.
+* `yarn add react-router-dom`
 
-In the project directory, you can run:
+Import BrowserBrowser router into index.js and wrap App element in BrowserRouter tags.
+* `import { BrowserRouter } from 'react-router-dom';`
 
-### `npm start`
+Add Styled Components
+* `yarn add styled-components`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### TESTING, ESLINT & PRETTIER SETUP
+Add testing packages:
+* `yarn add eslint-plugin-testing-library eslint-plugin-jest-dom`
 
-### `npm test`
+Add most recent UserEvent dependency to Testing Library
+* `yarn add @testing-library/user-event@^14`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Remove `eslintconfig` from package.json
 
-### `npm run build`
+Create `.eslintrc` and add standard config
+```
+{
+  "plugins": [
+    "jest-dom",
+    "testing-library"
+  ],
+  "extends": [
+    "react-app",
+    "react-app/jest",
+    "plugin:testing-library/react",
+    "plugin:jest-dom/recommended"
+  ]
+}
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Create `.vscode/settings.json` and add standard config
+```
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true
+}
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### TYPESCRIPT CONFIGURATION
+Add Typescript
+* `yarn add typescript`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Add React Types
+* `yarn add --dev @types/react @types/react-dom @types/react-router-dom`
 
-### `npm run eject`
+Add Styled Component Types
+* `yarn add --dev @types/styled-components`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Setup PNG handling
+* create `global.d.ts` file in root directory
+* inside: `declare module '*.png';
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Create `tsconfig.json` and save in root directory
+* "include" should reference the `src` folder and the `global.d.ts` file
+* "compiler options" should have "jsx" set to "react-jsx" and "target" set to "es6"
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## ADD REACT BOOTSTRAP
+`yarn add react-bootstrap bootstrap`
 
-## Learn More
+Add react-bootstrap script tags to `public/index.html` from here:
+https://react-bootstrap.netlify.app/getting-started/introduction/#browser-globals
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+import react bootstrap into `index.js`
+`import 'bootstrap/dist/css/bootstrap.min.css'`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## SCREEN QUERY METHODS
+Command: 
+get - expect element to be in DOM
+query - expect element not to be in DOM
+find - expect element to appear async
 
-### Code Splitting
+[All]
+* (exclude) expect only one match
+* (include) expect more than one match
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+QueryType:
+Role (most preferred)
+AltText (images)
+Text (display elements)
+Form Elements
+-PlaceholderText
+-LabelText
+-DisplayValue
