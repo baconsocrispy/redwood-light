@@ -1,21 +1,26 @@
-import { LogoContainer, NavigationContainer, NavigationLink, NavigationLinksContainer } from "./navigation.styles";
+// internal imports
+import RedwoodLogo from "../../assets/images/logo.v1.png";
 
+// styles
+import {
+  NavigationLogo,
+  LogoContainer,
+  NavigationContainer,
+  NavigationLink,
+  NavigationLinksContainer,
+} from "./navigation.styles";
+
+// component
 const Navigation = () => {
   return (
     <NavigationContainer>
       <LogoContainer>
-        <img className="logo" alt="Redwood Lighting Main Logo" />
+        <NavigationLogo src={RedwoodLogo} alt="Redwood Lighting Main Logo" />
       </LogoContainer>
-      <NavigationLinksContainer className="nav-links-container">
-        <NavigationLink className="nav-link" to="/">
-          Team
-        </NavigationLink>
-        <NavigationLink className="nav-link" to="/">
-          Awards
-        </NavigationLink>
-        <NavigationLink className="nav-link" to="/">
-          Contact
-        </NavigationLink>
+      <NavigationLinksContainer>
+        <NavigationLink to="team">Team</NavigationLink>
+        <NavigationLink to="awards">Awards</NavigationLink>
+        <NavigationLink to="contact">Contact</NavigationLink>
       </NavigationLinksContainer>
     </NavigationContainer>
   );
