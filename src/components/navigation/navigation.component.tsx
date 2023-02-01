@@ -1,21 +1,23 @@
+import { LogoContainer, NavigationContainer, NavigationLink, NavigationLinksContainer } from "./navigation.styles";
+
 const Navigation = () => {
   return (
-    <div className="nav-container">
-      <div className="logo-container">
+    <NavigationContainer>
+      <LogoContainer>
         <img className="logo" alt="Redwood Lighting Main Logo" />
-      </div>
-      <div className="nav-links-container">
-        <a className="nav-link" href="/">
+      </LogoContainer>
+      <NavigationLinksContainer className="nav-links-container">
+        <NavigationLink className="nav-link" to="/">
           Team
-        </a>
-        <a className="nav-link" href="/">
+        </NavigationLink>
+        <NavigationLink className="nav-link" to="/">
           Awards
-        </a>
-        <a className="nav-link" href="/">
+        </NavigationLink>
+        <NavigationLink className="nav-link" to="/">
           Contact
-        </a>
-      </div>
-    </div>
+        </NavigationLink>
+      </NavigationLinksContainer>
+    </NavigationContainer>
   );
 };
 
