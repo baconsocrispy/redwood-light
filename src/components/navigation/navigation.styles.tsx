@@ -3,14 +3,13 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 // internal imports
-import ThemeStyles from "../../theme.styles";
+import ThemeStyles from "../../utils/theme.styles";
 
 export const NavigationContainer = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
   padding: 0 1%;
-  border-bottom: 1px solid black;
   font-family: ${ThemeStyles.fonts.primary};
 
   @media (min-width: ${ThemeStyles.breakpoints.medium}) {
@@ -24,6 +23,7 @@ export const LogoContainer = styled.div`
   cursor: pointer;
   width: 100%;
   max-width: 250px;
+  padding: 3%;
 
   @media (min-width: ${ThemeStyles.breakpoints.medium}) {
     width: 250px;

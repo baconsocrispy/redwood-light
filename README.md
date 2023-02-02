@@ -62,7 +62,10 @@ Add Styled Component Types
 
 Setup PNG handling
 * create `global.d.ts` file in root directory
-* inside: `declare module '*.png';
+* inside: 
+`declare module '*.png';`
+`declare module '*.jpeg';`
+`declare module '*.jpg';`
 
 Create `tsconfig.json` and save in root directory
 * "include" should reference the `src` folder and the `global.d.ts` file
@@ -77,6 +80,26 @@ https://react-bootstrap.netlify.app/getting-started/introduction/#browser-global
 
 import react bootstrap into `index.js`
 `import 'bootstrap/dist/css/bootstrap.min.css'`
+
+## ADD FONTAWESOME FONTS
+
+Using font awesome fonts for slideshow buttons:
+
+Base and React packages: 
+
+`yarn add @fortawesome/fontawesome-svg-core @fortawesome/react-fontawesome --save`
+
+Solid free icons: 
+`yarn add @fortawesome/free-solid-svg-icons --save`
+
+## ADD REACT TRANSITION GROUP
+This library handles transitions when components mount and unmount. 
+Using it here to handle slideshow image transitions.
+
+`yarn add react-transition-group --save`
+
+add the types:
+`yarn add @types/react-transition-group --dev --save`
 
 ## SCREEN QUERY METHODS
 Command: 
