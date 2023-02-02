@@ -24,12 +24,10 @@ type HeroSlideshowProps = {
 const HeroSlideshow: FC<HeroSlideshowProps> = ({ images }) => {
   // state
   const [imageIndex, setImageIndex] = useState(0);
-  const [ fade, setFade ] = useState(true)
 
   // click handlers
   const handleNextClick = () => {
     const nextIndex = imageIndex + 1 === images.length ? 0 : imageIndex + 1;
-    setFade(false)
     setImageIndex(nextIndex);
   };
 
@@ -41,7 +39,7 @@ const HeroSlideshow: FC<HeroSlideshowProps> = ({ images }) => {
   return (
     <SlideshowContainer>
       <SlideshowImageContainer>
-        <Transition in={fade} timeout={500}>
+        <Transition in={true} timeout={500} >
           {(state) => {
             console.log(state)
             return(<SlideshowImage
