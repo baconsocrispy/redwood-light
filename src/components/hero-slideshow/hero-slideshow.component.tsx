@@ -1,5 +1,5 @@
 // external imports
-import { useState, FC } from "react";
+import { useState, FC, useEffect, useRef } from "react";
 import { Transition } from "react-transition-group";
 import { faRightLong, faLeftLong } from "@fortawesome/free-solid-svg-icons";
 
@@ -11,7 +11,6 @@ import {
   SlideshowButtonContainer,
   SlideshowContainer,
   SlideshowImage,
-  SlideshowImageContainer,
 } from "./hero-slideshow.styles";
 
 // types
@@ -24,36 +23,51 @@ type HeroSlideshowProps = {
 const HeroSlideshow: FC<HeroSlideshowProps> = ({ images }) => {
   // state
   const [imageIndex, setImageIndex] = useState(0);
+  const [inProp, setInProp] = useState(false);
+  const [timing] = useState(500);
+  const nodeRef = useRef(null);
 
-  // click handlers
-  const handleNextClick = () => {
-    const nextIndex = imageIndex + 1 === images.length ? 0 : imageIndex + 1;
-    setImageIndex(nextIndex);
-  };
+  // side effects
+  useEffect(() => {
+    setInProp(true);
+  }, [imageIndex]);
 
-  const handleBackClick = () => {
-    const prevIndex = imageIndex - 1 < 0 ? images.length - 1 : imageIndex - 1;
-    setImageIndex(prevIndex);
+  // click handler
+  const handleClick = (direction: string, timing: number) => {
+    // set transition 'in' prop to false
+    setInProp(false);
+    // allow time for transition to take place
+    setTimeout(() => {
+      // set current image to next or previous based on direction
+      const nextIndex = imageIndex + 1 === images.length ? 0 : imageIndex + 1;
+      const prevIndex = imageIndex - 1 < 0 ? images.length - 1 : imageIndex - 1;
+      setImageIndex(direction === "right" ? nextIndex : prevIndex);
+    }, timing);
   };
 
   return (
     <SlideshowContainer>
-      <SlideshowImageContainer>
-        <Transition in={true} timeout={500} >
-          {(state) => {
-            console.log(state)
-            return(<SlideshowImage
-              state={state}
-              src={images[imageIndex].url}
-              alt={images[imageIndex].alt}
-            />)
-          }}
-        </Transition>
-      </SlideshowImageContainer>
+      <Transition nodeRef={nodeRef} in={inProp} timeout={timing}>
+        {(state) => (
+          <SlideshowImage
+            src={images[imageIndex].url}
+            alt={images[imageIndex].alt}
+            state={state}
+            timing={timing}
+            ref={nodeRef}
+          />
+        )}
+      </Transition>
 
       <SlideshowButtonContainer>
-        <SlideshowButton icon={faLeftLong} onClick={handleNextClick} />
-        <SlideshowButton icon={faRightLong} onClick={handleBackClick} />
+        <SlideshowButton
+          icon={faLeftLong}
+          onClick={() => handleClick("left", timing)}
+        />
+        <SlideshowButton
+          icon={faRightLong}
+          onClick={() => handleClick("right", timing)}
+        />
       </SlideshowButtonContainer>
     </SlideshowContainer>
   );
