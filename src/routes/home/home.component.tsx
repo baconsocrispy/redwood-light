@@ -5,7 +5,7 @@ import { HeroImages } from "../../utils/images";
 
 const Home = () => {
   return (
-    <HeroSlideshow images={ HeroImages } />
+    <HeroSlideshow images={ HeroImages } timing={500} />
   );
 };
 

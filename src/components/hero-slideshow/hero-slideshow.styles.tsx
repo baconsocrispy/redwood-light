@@ -18,14 +18,9 @@ export const SlideshowImage = styled.img<TransitionProps>`
   width: 100%;
   height: 300px;
   object-fit: cover; // keeps images proportional as screen size adjusts
-  opacity: ${({ state }) => {
-    if(state === "entered" || state === "entering") {
-      return 1
-    } else if (state === "exiting" || state === "exited") {
-      return 0
-    }
-  }};
-  transition: opacity ${({timing}) => timing}ms ease-in-out;
+  opacity: ${({ state }) =>
+    state === "entered" || state === "entering" ? 1 : 0};
+  transition: opacity ${({ timing }) => timing}ms ease-in-out;
 
   @media (min-width: ${breakpoints.medium}) {
     height: 700px;

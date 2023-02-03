@@ -17,14 +17,14 @@ import {
 import { Image } from "../../utils/images";
 type HeroSlideshowProps = {
   images: Image[];
+  timing: number;
 };
 
 // component
-const HeroSlideshow: FC<HeroSlideshowProps> = ({ images }) => {
+const HeroSlideshow: FC<HeroSlideshowProps> = ({ images, timing }) => {
   // state
   const [imageIndex, setImageIndex] = useState(0);
   const [inProp, setInProp] = useState(false);
-  const [timing] = useState(500);
   const nodeRef = useRef(null);
 
   // side effects
