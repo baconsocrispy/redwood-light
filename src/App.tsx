@@ -9,7 +9,6 @@ import Navigation from "./components/navigation/navigation.component";
 // styles
 import { GlobalStyle } from "./global.styles";
 
-
 const App = () => {
   return (
     <Fragment>

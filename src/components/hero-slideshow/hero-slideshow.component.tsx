@@ -3,10 +3,9 @@ import { useState, FC, useEffect, useRef } from "react";
 import { Transition } from "react-transition-group";
 import { faRightLong, faLeftLong } from "@fortawesome/free-solid-svg-icons";
 
-// internal imports
-
 // styles
 import {
+  SlideshowArrowIcon,
   SlideshowButton,
   SlideshowButtonContainer,
   SlideshowContainer,
@@ -45,12 +44,13 @@ const HeroSlideshow: FC<HeroSlideshowProps> = ({ images, timing }) => {
     }, timing);
   };
 
+  // component elements
   return (
     <SlideshowContainer>
       <Transition nodeRef={nodeRef} in={inProp} timeout={timing}>
         {(state) => (
           <SlideshowImage
-            src={images[imageIndex].url}
+            src={images[imageIndex].src}
             alt={images[imageIndex].alt}
             state={state}
             timing={timing}
@@ -61,13 +61,17 @@ const HeroSlideshow: FC<HeroSlideshowProps> = ({ images, timing }) => {
 
       <SlideshowButtonContainer>
         <SlideshowButton
-          icon={faLeftLong}
           onClick={() => handleClick("left", timing)}
-        />
+          name="rotate-slideshow-left"
+        >
+          <SlideshowArrowIcon title="left-long" icon={faLeftLong} />
+        </SlideshowButton>
         <SlideshowButton
-          icon={faRightLong}
           onClick={() => handleClick("right", timing)}
-        />
+          name="rotate-slideshow-left"
+        >
+          <SlideshowArrowIcon title="right-long" icon={faRightLong} />
+        </SlideshowButton>
       </SlideshowButtonContainer>
     </SlideshowContainer>
   );

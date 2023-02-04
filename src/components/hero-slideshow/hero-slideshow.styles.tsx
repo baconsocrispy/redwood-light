@@ -36,7 +36,12 @@ export const SlideshowButtonContainer = styled.div`
   padding: 0 1em;
 `;
 
-export const SlideshowButton = styled(FontAwesomeIcon)`
+export const SlideshowButton = styled.button`
+  background: none;
+  border: none;
+`
+
+export const SlideshowArrowIcon = styled(FontAwesomeIcon)`
   cursor: pointer;
   color: white;
   font-size: 1.5em;

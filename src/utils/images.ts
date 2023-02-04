@@ -6,34 +6,34 @@ import UFCApex from "../assets/images/ufc-apex-studio.jpeg";
 
 export type Image = {
   name: string;
-  url: string;
+  src: string;
   alt: string;
 };
 
 export const HeroImages: Image[] = [
   {
     name: 'LA Rams',
-    url: LARams,
+    src: LARams,
     alt: "Los Angeles Rams digital studio",
   },
   {  
     name: 'KHOU 11 Houston',
-    url: KHOUHouston,
+    src: KHOUHouston,
     alt: "KHOU 11 Houston studio",
   },
   {
     name: 'NBC Miami',
-    url: NBCMiami,
+    src: NBCMiami,
     alt: "NBC Miami studio",
   },
   {
     name: 'Sportsnet LA',
-    url:SportsNetLA,
+    src:SportsNetLA,
     alt: "Sportsnet LA studio",
   },
   {
     name: 'UFC Apex',
-    url: UFCApex,
+    src: UFCApex,
     alt: "UFC Apex studio",
   },
 ];
