@@ -4,6 +4,8 @@ export const ThemeStyles = {
   },
   colors: {
     redwoodRed: "rgb(142, 36, 12)",
+    white: "#fff",
+    black: "rgb(50, 50, 50)",
   },
   fonts: {
     primary: "Montserrat",

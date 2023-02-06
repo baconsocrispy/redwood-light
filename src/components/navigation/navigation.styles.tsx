@@ -5,15 +5,18 @@ import { Link } from "react-router-dom";
 // internal imports
 import ThemeStyles from "../../utils/theme.styles";
 
-export const NavigationContainer = styled.div`
+// styles
+const { breakpoints, fonts, colors } = ThemeStyles
+
+export const NavigationContainer = styled.nav`
   width: 100%;
   display: flex;
   justify-content: center;
   padding: 0 1%;
-  font-family: ${ThemeStyles.fonts.primary};
+  font-family: ${fonts.primary};
 
-  @media (min-width: ${ThemeStyles.breakpoints.medium}) {
-    height: 4em;
+  @media (min-width: ${breakpoints.medium}) {
+    height: 5rem;
     justify-content: space-between;
     align-items: center;
   }
@@ -22,11 +25,11 @@ export const NavigationContainer = styled.div`
 export const LogoContainer = styled.div`
   cursor: pointer;
   width: 100%;
-  max-width: 250px;
+  max-width: 25rem;
   padding: 3%;
 
-  @media (min-width: ${ThemeStyles.breakpoints.medium}) {
-    width: 250px;
+  @media (min-width: ${breakpoints.medium}) {
+    width: 25rem;
   }
 `;
 
@@ -37,16 +40,18 @@ export const NavigationLogo = styled.img`
 export const NavigationLinksContainer = styled.div`
   display: none;
   height: 100%;
-  margin-right: 1em;
+  margin-right: 1rem;
 
-  @media (min-width: ${ThemeStyles.breakpoints.medium}) {
+  @media (min-width: ${breakpoints.medium}) {
     display: flex;
   }
 `;
 
 export const NavigationLink = styled(Link)`
-  height: 100%;
   display: flex;
-  padding: 0% 2%;
   align-items: center;
+  height: 100%;
+  padding: 0% 2%;
+  color: ${colors.black};
+  font-size: 1.5rem;
 `;

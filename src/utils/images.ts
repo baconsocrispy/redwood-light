@@ -12,27 +12,27 @@ export type Image = {
 
 export const HeroImages: Image[] = [
   {
-    name: 'LA Rams',
-    src: LARams,
-    alt: "Los Angeles Rams digital studio",
-  },
-  {  
-    name: 'KHOU 11 Houston',
+    name: "KHOU 11 Houston",
     src: KHOUHouston,
     alt: "KHOU 11 Houston studio",
   },
   {
-    name: 'NBC Miami',
+    name: "LA Rams",
+    src: LARams,
+    alt: "Los Angeles Rams digital studio",
+  },
+  {
+    name: "NBC Miami",
     src: NBCMiami,
     alt: "NBC Miami studio",
   },
   {
-    name: 'Sportsnet LA',
-    src:SportsNetLA,
+    name: "Sportsnet LA",
+    src: SportsNetLA,
     alt: "Sportsnet LA studio",
   },
   {
-    name: 'UFC Apex',
+    name: "UFC Apex",
     src: UFCApex,
     alt: "UFC Apex studio",
   },

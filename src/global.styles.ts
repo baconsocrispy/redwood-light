@@ -1,17 +1,24 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
-  * {
-    box-sizing: border-box;
+  *,
+  *::after,
+  *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
   }
 
+  // set default rem to 10px
+  html {
+    font-size: 62.5%;
+  }
+  
   body {
-    margin: 0;
-    color: var(--theme-font-color-primary)
+    box-sizing: border-box;
   }
 
   a {
     text-decoration: none;
-    color: var(--theme-font-color-primary);
   }
 `;

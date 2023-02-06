@@ -39,7 +39,8 @@ export const SlideshowButtonContainer = styled.div`
 export const SlideshowButton = styled.button`
   background: none;
   border: none;
-`
+  z-index: 50;
+`;
 
 export const SlideshowArrowIcon = styled(FontAwesomeIcon)`
   cursor: pointer;
