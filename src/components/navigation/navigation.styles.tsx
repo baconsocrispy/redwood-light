@@ -16,7 +16,7 @@ export const NavigationContainer = styled.nav`
   font-family: ${fonts.primary};
 
   @media (min-width: ${breakpoints.medium}) {
-    height: 5rem;
+    height: 7rem;
     justify-content: space-between;
     align-items: center;
   }
