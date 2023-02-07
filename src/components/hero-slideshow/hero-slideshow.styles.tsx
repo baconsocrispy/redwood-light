@@ -21,6 +21,7 @@ export const SlideshowImage = styled.img<TransitionProps>`
   opacity: ${({ state }) =>
     state === "entered" || state === "entering" ? 1 : 0};
   transition: opacity ${({ timing }) => timing}ms ease-in-out;
+  background-position: bottom;
 
   @media (min-width: ${breakpoints.medium}) {
     height: 700px;

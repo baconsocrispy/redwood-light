@@ -1,7 +1,10 @@
 // external imports
-import { useState, FC, useEffect, useRef } from "react";
+import { useState, FC, useEffect, useRef, Fragment } from "react";
 import { Transition } from "react-transition-group";
 import { faRightLong, faLeftLong } from "@fortawesome/free-solid-svg-icons";
+
+// internal imports
+import FadeInHeader from "../fade-in-header/fade-in-header.component";
 
 // styles
 import {
@@ -25,6 +28,7 @@ const HeroSlideshow: FC<HeroSlideshowProps> = ({ images, timing }) => {
   const [imageIndex, setImageIndex] = useState(0);
   const [inProp, setInProp] = useState(false);
   const nodeRef = useRef(null);
+  const headerContent = "bring your best moments to light";
 
   // side effects
   useEffect(() => {
@@ -46,34 +50,37 @@ const HeroSlideshow: FC<HeroSlideshowProps> = ({ images, timing }) => {
 
   // component elements
   return (
-    <SlideshowContainer>
-      <Transition nodeRef={nodeRef} in={inProp} timeout={timing}>
-        {(state) => (
-          <SlideshowImage
-            src={images[imageIndex].src}
-            alt={images[imageIndex].alt}
-            state={state}
-            timing={timing}
-            ref={nodeRef}
-          />
-        )}
-      </Transition>
+    <Fragment>
+      {imageIndex === 0 && <FadeInHeader content={headerContent} />}
+      <SlideshowContainer>
+        <Transition nodeRef={nodeRef} in={inProp} timeout={timing}>
+          {(state) => (
+            <SlideshowImage
+              src={images[imageIndex].src}
+              alt={images[imageIndex].alt}
+              state={state}
+              timing={timing}
+              ref={nodeRef}
+            />
+          )}
+        </Transition>
 
-      <SlideshowButtonContainer>
-        <SlideshowButton
-          onClick={() => handleClick("left", timing)}
-          name="rotate-slideshow-left"
-        >
-          <SlideshowArrowIcon title="left-long" icon={faLeftLong} />
-        </SlideshowButton>
-        <SlideshowButton
-          onClick={() => handleClick("right", timing)}
-          name="rotate-slideshow-left"
-        >
-          <SlideshowArrowIcon title="right-long" icon={faRightLong} />
-        </SlideshowButton>
-      </SlideshowButtonContainer>
-    </SlideshowContainer>
+        <SlideshowButtonContainer>
+          <SlideshowButton
+            onClick={() => handleClick("left", timing)}
+            name="rotate-slideshow-left"
+          >
+            <SlideshowArrowIcon title="left-long" icon={faLeftLong} />
+          </SlideshowButton>
+          <SlideshowButton
+            onClick={() => handleClick("right", timing)}
+            name="rotate-slideshow-left"
+          >
+            <SlideshowArrowIcon title="right-long" icon={faRightLong} />
+          </SlideshowButton>
+        </SlideshowButtonContainer>
+      </SlideshowContainer>
+    </Fragment>
   );
 };
 
