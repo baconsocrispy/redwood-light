@@ -13,6 +13,7 @@ import {
   SlideshowButtonContainer,
   SlideshowContainer,
   SlideshowImage,
+  SlideshowWrapper
 } from "./hero-slideshow.styles";
 
 // types
@@ -50,7 +51,7 @@ const HeroSlideshow: FC<HeroSlideshowProps> = ({ images, timing }) => {
 
   // component elements
   return (
-    <Fragment>
+    <SlideshowWrapper>
       {imageIndex === 0 && <FadeInHeader content={headerContent} />}
       <SlideshowContainer>
         <Transition nodeRef={nodeRef} in={inProp} timeout={timing}>
@@ -80,7 +81,7 @@ const HeroSlideshow: FC<HeroSlideshowProps> = ({ images, timing }) => {
           </SlideshowButton>
         </SlideshowButtonContainer>
       </SlideshowContainer>
-    </Fragment>
+    </SlideshowWrapper>
   );
 };
 

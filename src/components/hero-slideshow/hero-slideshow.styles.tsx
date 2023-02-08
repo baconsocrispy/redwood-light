@@ -4,6 +4,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const { breakpoints } = ThemeStyles;
 
+export const SlideshowWrapper = styled.div`
+  width: 100%;
+  position: relative;
+`
+
 export const SlideshowContainer = styled.div`
   width: 100%;
   position: relative;
@@ -16,7 +21,7 @@ type TransitionProps = {
 
 export const SlideshowImage = styled.img<TransitionProps>`
   width: 100%;
-  height: 300px;
+  height: 30rem;
   object-fit: cover; // keeps images proportional as screen size adjusts
   opacity: ${({ state }) =>
     state === "entered" || state === "entering" ? 1 : 0};
@@ -24,7 +29,7 @@ export const SlideshowImage = styled.img<TransitionProps>`
   background-position: bottom;
 
   @media (min-width: ${breakpoints.medium}) {
-    height: 700px;
+    height: 70rem;
   }
 `;
 
@@ -46,10 +51,14 @@ export const SlideshowButton = styled.button`
 export const SlideshowArrowIcon = styled(FontAwesomeIcon)`
   cursor: pointer;
   color: white;
-  font-size: 1.5em;
-  opacity: 0.7;
+  font-size: 2.5rem;
+  opacity: 1;
 
   &:hover {
     opacity: 1;
+  }
+
+  @media (min-width: ${breakpoints.medium}) {
+    opacity: .7;
   }
 `;
