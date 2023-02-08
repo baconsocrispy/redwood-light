@@ -11,6 +11,12 @@ export const ThemeStyles = {
     primary: "Montserrat",
     secondary: "Roboto",
   },
+  fontSizes: {
+    copy: "2rem",
+    mobileCopy: "1.5rem",
+    sectionHeader: "3rem",
+    mobileSectionHeader: "2rem",
+  }
 };
 
 export default ThemeStyles;
