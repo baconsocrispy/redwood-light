@@ -1,4 +1,7 @@
 import { createGlobalStyle } from "styled-components";
+import ThemeStyles from "./utils/theme.styles";
+
+const { heights } = ThemeStyles;
 
 export const GlobalStyle = createGlobalStyle`
   *,
@@ -9,13 +12,13 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: inherit;
   }
 
-  // set default rem to 10px
   html {
-    font-size: 62.5%;
+    font-size: 62.5%; // set default rem to 10px
   }
   
   body {
     box-sizing: border-box;
+    margin-top: ${heights.navHeight}; // offset body to accommodate fixed header
   }
 
   a {

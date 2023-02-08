@@ -2,7 +2,7 @@ import styled from "styled-components";
 import ThemeStyles from "../../utils/theme.styles";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const { breakpoints } = ThemeStyles;
+const { breakpoints, heights } = ThemeStyles;
 
 export const SlideshowWrapper = styled.div`
   width: 100%;

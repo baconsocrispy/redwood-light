@@ -2,21 +2,25 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-// internal imports
-import ThemeStyles from "../../utils/theme.styles";
-
 // styles
-const { breakpoints, fonts, colors } = ThemeStyles
+import ThemeStyles from "../../utils/theme.styles";
+const { breakpoints, fonts, colors, heights } = ThemeStyles
 
 export const NavigationContainer = styled.nav`
+  position: fixed;
   width: 100%;
+  height: ${heights.navHeight};
+  top: 0;
+  left: 0;
   display: flex;
   justify-content: center;
+  z-index: 1000;
   padding: 0 1%;
+  background-color: ${colors.white};
   font-family: ${fonts.primary};
+  box-shadow: 1rem 0 15rem rgba(0, 0, 0, 0.4);
 
   @media (min-width: ${breakpoints.medium}) {
-    height: 7rem;
     justify-content: space-between;
     align-items: center;
   }
