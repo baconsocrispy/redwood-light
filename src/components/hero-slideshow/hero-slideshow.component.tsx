@@ -1,5 +1,5 @@
 // external imports
-import { useState, FC, useEffect, useRef, Fragment } from "react";
+import { useState, FC, useEffect, useRef } from "react";
 import { Transition } from "react-transition-group";
 import { faRightLong, faLeftLong } from "@fortawesome/free-solid-svg-icons";
 

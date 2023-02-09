@@ -1,8 +1,10 @@
 import styled from "styled-components";
 
 export const PageSection = styled.section`
+  position: relative;
   width: 100%;
-  &:not(:last-child) {
-    margin-bottom: 5rem;
+
+  &:nth-child(2) {
+    padding: 2rem 0;
   }
-`
+`;

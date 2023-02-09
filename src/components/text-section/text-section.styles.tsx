@@ -4,9 +4,11 @@ import ThemeStyles from "../../utils/theme.styles";
 const { colors, fonts, fontSizes, breakpoints } = ThemeStyles;
 
 export const TextSectionContainer = styled.div`
+  position: relative;
   width: 90%;
   margin: 2rem auto;
   text-align: center;
+  background: transparent;
 
 
   @media (min-width: ${breakpoints.medium}) {

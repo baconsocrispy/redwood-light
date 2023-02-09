@@ -2,6 +2,7 @@
 import Broadcast from "../assets/images/services/broadcast-sportsnet.jpeg";
 import Corporate from "../assets/images/services/corporate-amazon.png";
 import LiveEvents from "../assets/images/services/esports-live-events-redbull-studio.jpeg";
+import DesignIntegration from "../assets/images/services/design-integration.png";
 
 // types
 import { Image } from "./images";
@@ -25,7 +26,7 @@ export const Services: Service[] = [
     },
   },
   {
-    title: "Corporate Solutions & Consultation",
+    title: "Corporate Solutions",
     description: `We provide both turnkey lighting solutions as well as
       customizable set and lighting designs tailored to the specific needs of 
       your business. From infrastructure to equipment and control technology 
@@ -37,7 +38,7 @@ export const Services: Service[] = [
     },
   },
   {
-    title: "E-Sports, Live Events and More",
+    title: "Live Events, E-Sports and More",
     description: `Elevate your live event coverage with Redwood Light. Our 
       temporary and permanent installations, including moving lights, LED 
       technology, and state-of-the-art designs, ensure a seamless experience 
@@ -49,3 +50,13 @@ export const Services: Service[] = [
     },
   },
 ];
+
+export const Schematic: Service = {
+  title: "Design & Integration",
+  description: `Schematic for design and integration`,
+  image: {
+    name: "Design & Integration",
+    src: DesignIntegration,
+    alt: "Schematic for design and integration",
+  },
+};
