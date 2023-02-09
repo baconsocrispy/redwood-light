@@ -16,6 +16,7 @@ export const ThemeStyles = {
     mobileCopy: "1.5rem",
     sectionHeader: "3rem",
     mobileSectionHeader: "2rem",
+    subHeader: "2rem",
   },
   heights: {
     navHeight: "7rem",

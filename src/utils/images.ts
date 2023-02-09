@@ -1,9 +1,9 @@
 // image imports
-import LARams from "../assets/images/la-rams-digital-studio.jpeg";
-import KHOUHouston from "../assets/images/khou-houston-studio.jpeg"
-import NBCMiami from "../assets/images/nbc-miami-studio.jpeg";
-import SportsNetLA from "../assets/images/sportsnet-la-studio.jpeg";
-import UFCApex from "../assets/images/ufc-apex-studio.jpeg";
+import LARams from "../assets/images/hero-images/la-rams-digital-studio.jpeg";
+import KHOUHouston from "../assets/images/hero-images/khou-houston-studio.jpeg"
+import NBCMiami from "../assets/images/hero-images/nbc-miami-studio.jpeg";
+import SportsNetLA from "../assets/images/hero-images/sportsnet-la-studio.jpeg";
+import UFCApex from "../assets/images/hero-images/ufc-apex-studio.jpeg";
 
 // types
 export type Image = {

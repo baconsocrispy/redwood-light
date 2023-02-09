@@ -8,6 +8,7 @@ export const TextSectionContainer = styled.div`
   margin: 2rem auto;
   text-align: center;
 
+
   @media (min-width: ${breakpoints.medium}) {
     width: 65%;
   }
