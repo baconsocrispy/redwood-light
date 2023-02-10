@@ -27,7 +27,7 @@ export const Services: Service[] = [
   },
   {
     title: "Corporate Solutions",
-    description: `We provide both turnkey lighting solutions as well as
+    description: `We provide both turnkey solutions as well as
       customizable set and lighting designs tailored to the specific needs of 
       your business. From infrastructure to equipment and control technology 
       we can turn almost any space into a fully functional media center.`,
