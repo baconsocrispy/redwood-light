@@ -8,7 +8,7 @@ export const LogoDisplayContainer = styled.div`
   align-items: center;
   overflow: scroll;
   padding: 0 1rem;
-`
+`;
 
 export const LogoDisplayHeader = styled.h2`
   display: block;

@@ -14,10 +14,10 @@ const TextSection = () => {
       <TextSectionParagraph>
         Bringing 25 years of Emmy-award winning excellence in lighting design,
         Redwood Light serves clients of all sizes across a variety of
-        industries, including broadcast news and sports, finance, tech, and live
-        events. We offer a full range of services, including integration for new
-        facilities, refurbishment for existing studios, and expert consultation
-        to ensure the best possible results within budget and scope.
+        industries, including broadcast news and sports, finance, media, tech, and live
+        events. We offer a wide range of services, including integrating new
+        facilities, refurbishment of existing facilities, and expert consultation
+        to ensure the best possible results within your budget and scope.
       </TextSectionParagraph>
     </TextSectionContainer>
   );

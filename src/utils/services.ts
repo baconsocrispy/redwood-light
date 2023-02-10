@@ -2,7 +2,8 @@
 import Broadcast from "../assets/images/services/broadcast-sportsnet.jpeg";
 import Corporate from "../assets/images/services/corporate-amazon.png";
 import LiveEvents from "../assets/images/services/esports-live-events-redbull-studio.jpeg";
-import DesignIntegration from "../assets/images/services/design-integration.png";
+import DesignIntegration1 from "../assets/images/services/design-integration.png";
+import DesignIntegration2 from "../assets/images/services/schematic.png";
 
 // types
 import { Image } from "./images";
@@ -51,12 +52,23 @@ export const Services: Service[] = [
   },
 ];
 
-export const Schematic: Service = {
-  title: "Design & Integration",
-  description: `Schematic for design and integration`,
-  image: {
-    name: "Design & Integration",
-    src: DesignIntegration,
-    alt: "Schematic for design and integration",
+export const Schematics: Service[] = [
+  {
+    title: "Design & Integration",
+    description: `Schematic for design and integration`,
+    image: {
+      name: "Design & Integration",
+      src: DesignIntegration1,
+      alt: "Schematic for design and integration",
+    },
   },
-};
+  {
+    title: "Design Schematic",
+    description: `Schematic for design and integration`,
+    image: {
+      name: "Design Schematic",
+      src: DesignIntegration2,
+      alt: "Schematic for design and integration",
+    },
+  },
+];

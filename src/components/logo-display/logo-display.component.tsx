@@ -19,7 +19,7 @@ type LogoDisplayProps = {
 const LogoDisplay: FC<LogoDisplayProps> = ({ logos }) => {
   return (
     <>
-      <LogoDisplayHeader>previous clients</LogoDisplayHeader>
+      <LogoDisplayHeader>featured clients</LogoDisplayHeader>
       <LogoDisplayContainer>
         {logos.map((logo, index) => (
           <LogoContainer key={index}>
