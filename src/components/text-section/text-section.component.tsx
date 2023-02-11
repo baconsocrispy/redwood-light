@@ -12,7 +12,7 @@ const TextSection = () => {
         Full Service Lighting Design & Integration
       </TextSectionHeader>
       <TextSectionParagraph>
-        Bringing 25 years of Emmy-award winning excellence in lighting design,
+        With 25 years of Emmy-award winning excellence in lighting design,
         Redwood Light serves clients of all sizes across a variety of
         industries, including broadcast news and sports, finance, media, tech, and live
         events. We offer a wide range of services, including integrating new

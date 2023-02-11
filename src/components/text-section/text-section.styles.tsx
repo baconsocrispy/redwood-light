@@ -6,7 +6,7 @@ const { colors, fonts, fontSizes, breakpoints } = ThemeStyles;
 export const TextSectionContainer = styled.div`
   position: relative;
   width: 90%;
-  margin: 2rem auto;
+  margin: 6rem auto;
   text-align: center;
   background: transparent;
 

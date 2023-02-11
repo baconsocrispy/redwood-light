@@ -1,22 +1,32 @@
 // external imports
-import { FC } from "react"
+import { FC } from "react";
+
+// styles
+import {
+  LearnMoreButton,
+  ProjectContainer,
+  ProjectHeader,
+  ProjectImage,
+  ProjectImageContainer,
+} from "./project.styles";
 
 //types
-import { Project } from "../../utils/projects"
-import { ProjectContainer, ProjectHeader, ProjectImage, ProjectImageContainer } from "./project.styles";
+import { Project } from "../../utils/projects";
+
 type ProjectProps = {
   project: Project;
-}
-const FeaturedProject:FC<ProjectProps> = ({ project }) => {
-  const { name, client, newscastUrl, image, } = project;
+};
+const FeaturedProject: FC<ProjectProps> = ({ project }) => {
+  const { name, client, newscastUrl, image } = project;
   return (
     <ProjectContainer>
-      <ProjectHeader>{ name }</ProjectHeader>
       <ProjectImageContainer>
-        <ProjectImage src={image.src } alt={image.alt} />
+        <ProjectImage src={image.src} alt={image.alt} />
       </ProjectImageContainer>
+      <ProjectHeader>{name}</ProjectHeader>
+      <LearnMoreButton to={newscastUrl}>learn more</LearnMoreButton>
     </ProjectContainer>
-  )
-}
+  );
+};
 
-export default FeaturedProject
+export default FeaturedProject;
