@@ -1,6 +1,7 @@
 import UFC from "../assets/images/projects/UFC.jpeg";
 import Rams from "../assets/images/projects/Rams.jpeg";
 import Miami from "../assets/images/projects/Miami.jpeg";
+import Sportsnet from "../assets/images/projects/Sportsnet.jpeg";
 
 import { Image } from "./images";
 
@@ -43,13 +44,13 @@ export const Projects: Project[] = [
     },
   },
   {
-    name: "WTJV NBC Miami Studio",
-    client: "WTJV NBC Miami",
+    name: "Sportsnet LA Studio",
+    client: "Sportsnet LA",
     newscastUrl: "https://www.newscaststudio.com/setstudio/ufc-apex-studio/",
     image: {
-      name: "WTJV NBC Miami Studio",
-      src: Miami,
-      alt: "WTJV NBC Miami Studio",
+      name: "Sportsnet LA",
+      src: Sportsnet,
+      alt: "Sportsnet LA studio",
     },
   },
 ]; 

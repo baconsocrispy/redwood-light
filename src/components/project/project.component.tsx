@@ -17,7 +17,7 @@ type ProjectProps = {
   project: Project;
 };
 const FeaturedProject: FC<ProjectProps> = ({ project }) => {
-  const { name, client, newscastUrl, image } = project;
+  const { name, newscastUrl, image } = project;
   return (
     <ProjectContainer>
       <ProjectImageContainer>

@@ -1,26 +1,42 @@
 // external imports
-import { FC } from "react"
+import { FC } from "react";
 
 // internal imports
 import FeaturedProject from "../project/project.component";
+import SelectionBar from "../selection-bar/selection-bar.component";
 
 //styles
-import { FeaturedProjectsContainer } from "./featured-section.styles";
+import {
+  FeaturedHeader,
+  FeaturedProjectsContainer,
+} from "./featured-section.styles";
 
-// types
-import { Project } from "../../utils/projects"
+// types/enums
+import { Project } from "../../utils/projects";
 type FeaturedSectionProps = {
-  projects: Project[];  
+  projects: Project[];
+};
+
+export enum SERVICE_TYPES {
+  BROADCAST = "broadcast",
+  CORPORATE = "corporate",
+  LIVE_EVENT = "live event",
 }
 
-const FeaturedSection:FC<FeaturedSectionProps> = ({ projects }) => {
+const FeaturedSection: FC<FeaturedSectionProps> = ({ projects }) => {
+
   return (
-    <FeaturedProjectsContainer>
-      {projects.map((project, index) => (
-        <FeaturedProject project={project} key={index} />
-      ))}
-    </FeaturedProjectsContainer>
-  )
-}
+    <>
+      <FeaturedHeader>Featured Projects</FeaturedHeader>
+      <SelectionBar options={Object.values(SERVICE_TYPES)} />
+      <FeaturedProjectsContainer>
+        {projects.map((project, index) => (
+          <FeaturedProject project={project} key={index} />
+        ))}
+      </FeaturedProjectsContainer>
+      <FeaturedHeader>Our Clients</FeaturedHeader>
+    </>
+  );
+};
 
-export default FeaturedSection
+export default FeaturedSection;

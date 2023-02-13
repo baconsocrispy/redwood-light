@@ -6,7 +6,6 @@ import {
   LogoContainer,
   LogoDisplayContainer,
   Logo,
-  LogoDisplayHeader,
 } from "./logo-display.styles";
 
 // types
@@ -18,8 +17,6 @@ type LogoDisplayProps = {
 // component
 const LogoDisplay: FC<LogoDisplayProps> = ({ logos }) => {
   return (
-    <>
-      <LogoDisplayHeader>featured clients</LogoDisplayHeader>
       <LogoDisplayContainer>
         {logos.map((logo, index) => (
           <LogoContainer key={index}>
@@ -27,7 +24,7 @@ const LogoDisplay: FC<LogoDisplayProps> = ({ logos }) => {
           </LogoContainer>
         ))}
       </LogoDisplayContainer>
-    </>
+
   );
 };
 

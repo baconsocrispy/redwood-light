@@ -33,12 +33,10 @@ const Home = () => {
         <TextSection />
         <CardSection services={Services} />
       </PageSection>
-      <PageSection>
-        <LogoDisplay logos={ClientLogos} />
-      </PageSection>
-      <PageSection>
+      <PageSection id="featured">
         <BackgroundImage image={bgImage2} />
         <FeaturedSection projects={Projects} />
+        <LogoDisplay logos={ClientLogos} />
       </PageSection>
     </main>
   );

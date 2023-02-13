@@ -5,15 +5,11 @@ import ThemeStyles from "../../utils/theme.styles";
 
 const { colors, fonts, fontSizes } = ThemeStyles;
 
-
-
-
-
 export const ProjectHeader = styled.h3`
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-55%, -50%);
   color: ${colors.white};
   font-family: ${fonts.secondary};
   font-size: ${fontSizes.sectionHeader};
@@ -54,22 +50,25 @@ export const ProjectImage = styled.img`
 
 export const ProjectContainer = styled.div`
   position: relative;
+  height: 25rem;
   width: 40rem;
   border-radius: 5px;
   box-shadow: 2rem 2rem 10rem rgba(0, 0, 0, 0.3);
   overflow: hidden;
 
   &:hover ${ProjectImageContainer} {
-    filter: blur(5px);
+    filter: blur(5px) brightness(75%);
   }
 
   &:hover ${ProjectHeader} {
     /* filter: blur(4px) brightness(0.5); */
     opacity: 1;
+    transform: translate(-50%, -50%);
   }
 
   &:hover ${LearnMoreButton} {
     opacity: 1;
     visibility: visible;
+    transform: translate(-50%, -75%) skewX(-15deg);
   }
 `;

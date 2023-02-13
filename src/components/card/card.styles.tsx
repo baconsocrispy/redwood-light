@@ -79,3 +79,21 @@ export const CardDescription = styled.p`
     font-size: ${fontSizes.copy};
   }
 `;
+
+export const CardButton = styled.button`
+  cursor: pointer;
+  position: absolute;
+  bottom: 2rem;
+  right: 4rem;
+  padding-bottom: .5rem;
+  background: none;
+  border: none;
+  border-bottom: 2px solid ${colors.redwoodRed};
+  color: ${colors.redwoodRed};
+  font-family: ${fonts.secondary};
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, .2);
+  }
+`

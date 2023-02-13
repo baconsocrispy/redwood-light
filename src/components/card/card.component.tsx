@@ -3,13 +3,27 @@ import { FC } from "react";
 
 // types
 import { Service } from "../../utils/services";
-import { CardContainer, CardDescription, CardHeader, CardImage, CardImageContainer } from "./card.styles";
+import {
+  CardButton,
+  CardContainer,
+  CardDescription,
+  CardHeader,
+  CardImage,
+  CardImageContainer,
+} from "./card.styles";
 type CardProps = {
   service: Service;
-}
+};
 
 const Card: FC<CardProps> = ({ service }) => {
-  const {title, image, description } = service
+  const { title, image, description } = service;
+
+  const handleClick = () => {
+    const featured = document.getElementById("featured");
+    featured?.scrollIntoView({
+      behavior: 'smooth'
+    });
+  }
 
   return (
     <CardContainer>
@@ -18,6 +32,7 @@ const Card: FC<CardProps> = ({ service }) => {
         <CardImage src={image.src} alt={image.alt} className="card-image" />
       </CardImageContainer>
       <CardDescription className="description">{description}</CardDescription>
+      <CardButton onClick={handleClick}>Featured Projects</CardButton>
     </CardContainer>
   );
 };
