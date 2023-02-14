@@ -15,6 +15,7 @@ import { Projects } from "../../utils/projects";
 import BackgroundImage from "../../components/background-image/background-image.component";
 import { ContactButton } from "../../components/contact-button/contact-button.component";
 import FeaturedSection from "../../components/featured-section/featured-section.component";
+import { FooterLink } from "../../components/footer/footer.styles";
 
 
 // components
@@ -26,9 +27,11 @@ const Home = () => {
     <main>
       <PageSection>
         <HeroSlideshow images={HeroImages} timing={500} />
-        <ContactButton>Contact Us</ContactButton>
+        <ContactButton>
+          <FooterLink href="/contact">Contact Us</FooterLink>
+        </ContactButton>
       </PageSection>
-      <PageSection>
+      <PageSection id="services">
         <BackgroundImage image={bgImage1} />
         <TextSection />
         <CardSection services={Services} />

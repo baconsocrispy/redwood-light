@@ -14,6 +14,7 @@ export const GlobalStyle = createGlobalStyle`
 
   html {
     font-size: 62.5%; // set default rem to 10px
+    scroll-behavior: smooth;
   }
   
   body {

@@ -8,6 +8,7 @@ import Navigation from "./components/navigation/navigation.component";
 
 // styles
 import { GlobalStyle } from "./global.styles";
+import Footer from "./components/footer/footer.component";
 
 // component
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
       </Routes>
+      <Footer />
     </Fragment>
   );
 };
