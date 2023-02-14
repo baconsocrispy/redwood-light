@@ -42,9 +42,6 @@ export const CardHeader = styled.h3`
   text-transform: uppercase;
   font-family: ${fonts.secondary};
   font-size: ${fontSizes.subHeader};
-
-  @media (min-width: ${breakpoints.medium}) {
-  }
 `
 
 export const CardImageContainer = styled.figure`

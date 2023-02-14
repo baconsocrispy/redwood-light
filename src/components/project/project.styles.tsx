@@ -26,7 +26,8 @@ export const LearnMoreButton = styled(Link)`
   transform: translate(-50%, -50%) skewX(-15deg);
   color: ${colors.white};
   text-transform: uppercase;
-  text-decoration: underline;
+  border-bottom: 2px solid ${colors.white};
+  padding-bottom: .5rem;
   font-family: ${fonts.secondary};
   font-size: ${fontSizes.copy};
   transition: all 1s ease-in-out;

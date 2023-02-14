@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import ThemeStyles from "../../utils/theme.styles";
+import { slideInLeft } from "../../utils/animations";
 
 const { colors, fonts, fontSizes } = ThemeStyles;
 
@@ -11,6 +12,8 @@ export const FeaturedProjectsContainer = styled.div`
   flex-wrap: wrap;
   gap: 5rem 5rem;
   justify-content: space-evenly;
+  transition: all .7s ease-in-out;
+  animation: ${slideInLeft} .7s ease-in-out;
 `
 
 export const FeaturedHeader = styled.h2`
@@ -21,3 +24,16 @@ export const FeaturedHeader = styled.h2`
   color: ${colors.black};
   margin: 0 auto;
 `
+
+export const SelectionBarContainer = styled.div`
+  width: 95%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 2rem;
+`;
+
+export const SelectionBarOption = styled.button`
+  cursor: pointer;
+  text-transform: uppercase;
+  padding: 1rem;
+`;
