@@ -1,5 +1,5 @@
 // external imports
-import { FC, useEffect, useState } from "react";
+import { FC, useState } from "react";
 
 // internal imports
 import FeaturedProject from "../project/project.component";
@@ -29,8 +29,6 @@ export enum SERVICE_TYPES {
 const FeaturedSection: FC<FeaturedSectionProps> = ({ projects }) => {
   // state
   const [selected, setSelected] = useState(SERVICE_TYPES.BROADCAST);
-  const [animate, setAnimate ] = useState(false)
-  
 
   // click handler
   const changeProjectCategory = (category: SERVICE_TYPES) => 
