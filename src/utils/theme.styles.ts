@@ -1,6 +1,8 @@
 export const ThemeStyles = {
-  breakpoints: {
+  breakpoints: { 
+    small: "580px",
     medium: "700px",
+    large: "835px",
   },
   colors: {
     redwoodRed: "rgb(142, 36, 12)",

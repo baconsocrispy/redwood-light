@@ -29,7 +29,7 @@ export const NavigationContainer = styled.nav`
 export const LogoContainer = styled.div`
   cursor: pointer;
   width: 100%;
-  max-width: 25rem;
+  max-width: 20rem;
   padding: 3%;
 
   @media (min-width: ${breakpoints.medium}) {
