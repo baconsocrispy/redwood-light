@@ -9,6 +9,7 @@ export const ProjectHeader = styled.h3`
   position: absolute;
   top: 50%;
   left: 50%;
+  width: 100%;
   transform: translate(-55%, -50%);
   color: ${colors.white};
   font-family: ${fonts.secondary};

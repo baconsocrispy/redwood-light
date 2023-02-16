@@ -43,6 +43,7 @@ export const FooterLink = styled.a`
 `
 
 export const Copyright = styled.div`
+  font-size: ${fontSizes.mobileCopy};
   transform: skewX(-15deg);
   margin-bottom: 2rem;
 `

@@ -93,8 +93,6 @@ export const CardImageContainer = styled.figure`
   @media (min-width: ${breakpoints.small}) {
     margin-top: 2.5rem;
     margin-left: 5%;
-    width: 20rem;
-    height: 20rem;
     float: left;
     transform: translateX(-2rem);
   }

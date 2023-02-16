@@ -10,6 +10,7 @@ import {
   FeaturedProjectsContainer,
   SelectionBarContainer,
   SelectionBarOption,
+  TouchscreenAlert
 } from "./featured-section.styles";
 
 // types
@@ -50,6 +51,8 @@ const FeaturedSection: FC<FeaturedSectionProps> = ({ projects }) => {
           );
         })}
       </SelectionBarContainer>
+
+      <TouchscreenAlert>Tap on a project to learn more</TouchscreenAlert>
 
       <FeaturedProjectsContainer key={selected}>
         {projects.map(
