@@ -39,7 +39,7 @@ export const Services: Service[] = [
     },
   },
   {
-    title: "Live Events, E-Sports and More",
+    title: "Live Events & E-Sports",
     description: `Elevate your live event coverage with Redwood Light. Our 
       temporary and permanent installations, including moving lights, LED 
       technology, and state-of-the-art designs, ensure a seamless experience 
