@@ -77,8 +77,8 @@ export const CardHeader = styled.h3`
 export const CardImageContainer = styled.figure`
   margin: 0 auto;
   margin-top: 2.5rem;
-  width: 15rem;
-  height: 15rem;
+  width: 20rem;
+  height: 20rem;
   border-radius: 50%;
   overflow: hidden;
   shape-outside: circle(50% at 50% 50%);
