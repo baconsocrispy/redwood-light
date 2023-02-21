@@ -6,7 +6,7 @@ const Footer = () => {
     <FooterContainer>
       <FooterList>
         <FooterItem>
-          <FooterLink href="/">Home</FooterLink>
+          <FooterLink href="/#home">Home</FooterLink>
         </FooterItem>
         <FooterItem>
           <FooterLink href="/#services">Services</FooterLink>

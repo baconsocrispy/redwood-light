@@ -25,7 +25,7 @@ const Home = () => {
 
   return (
     <main>
-      <PageSection>
+      <PageSection id='home'>
         <HeroSlideshow images={ HeroImages } />
         <ContactButton>
           <FooterLink href="/contact">Contact Us</FooterLink>
