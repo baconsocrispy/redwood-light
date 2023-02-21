@@ -7,12 +7,12 @@ const { colors, fonts, breakpoints } = ThemeStyles;
 export const FadeInHeaderContainer = styled.div`
   position: absolute;
   z-index: 10;
-  bottom: 5rem;
+  bottom: 2rem;
   left: 5rem;
   right: 5rem;
 
   @media (min-width: ${breakpoints.medium}) {
-    bottom: 15rem;
+    bottom: 2rem;
     left: 5rem;
     right: 5rem;
   }

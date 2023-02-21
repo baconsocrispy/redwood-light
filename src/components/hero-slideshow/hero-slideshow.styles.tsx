@@ -4,28 +4,28 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const { breakpoints } = ThemeStyles;
 
-export const SlideshowWrapper = styled.div`
-  width: 100%;
-  position: relative;
-`
-
 export const SlideshowContainer = styled.div`
-  width: 100%;
   position: relative;
+  width: 100%;
+  height: 30rem;
+  display: block;
+  overflow: hidden;
+
+  @media only screen and (min-width: ${ breakpoints.medium }) {
+    min-height: 55rem;
+  }
 `;
 
-type TransitionProps = {
-  state: string;
-  timing: number;
-};
-
-export const SlideshowImage = styled.img<TransitionProps>`
+export const SlideshowImageContainer = styled.div`
+  position: relative;
+  width: 100%;
+`
+export const SlideshowImage = styled.img`
+  position: absolute;
   width: 100%;
   height: 30rem;
   object-fit: cover; // keeps images proportional as screen size adjusts
-  opacity: ${({ state }) =>
-    state === "entered" || state === "entering" ? 1 : 0};
-  transition: opacity ${({ timing }) => timing}ms ease-in-out;
+  transition: opacity 1s ease-in-out;
   background-position: bottom;
 
   @media (min-width: ${breakpoints.medium}) {

@@ -26,20 +26,20 @@ const Home = () => {
   return (
     <main>
       <PageSection>
-        <HeroSlideshow images={HeroImages} timing={500} />
+        <HeroSlideshow images={ HeroImages } />
         <ContactButton>
           <FooterLink href="/contact">Contact Us</FooterLink>
         </ContactButton>
       </PageSection>
       <PageSection id="services">
-        <BackgroundImage image={bgImage1} />
+        <BackgroundImage image={ bgImage1 } />
         <TextSection />
-        <CardSection services={Services} />
+        <CardSection services={ Services } />
       </PageSection>
       <PageSection id="featured">
-        <BackgroundImage image={bgImage2} />
-        <FeaturedSection projects={Projects} />
-        <LogoDisplay logos={ClientLogos} />
+        <BackgroundImage image={ bgImage2 } />
+        <FeaturedSection projects={ Projects } />
+        <LogoDisplay logos={ ClientLogos } />
       </PageSection>
     </main>
   );

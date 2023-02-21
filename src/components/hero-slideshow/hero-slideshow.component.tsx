@@ -1,6 +1,5 @@
 // external imports
-import { useState, FC, useEffect, useRef } from "react";
-import { Transition } from "react-transition-group";
+import { useState, FC } from "react";
 import { faRightLong, faLeftLong } from "@fortawesome/free-solid-svg-icons";
 
 // internal imports
@@ -13,75 +12,67 @@ import {
   SlideshowButtonContainer,
   SlideshowContainer,
   SlideshowImage,
-  SlideshowWrapper
+  SlideshowImageContainer,
 } from "./hero-slideshow.styles";
 
 // types
 import { Image } from "../../utils/images";
 type HeroSlideshowProps = {
   images: Image[];
-  timing: number;
 };
 
 // component
-const HeroSlideshow: FC<HeroSlideshowProps> = ({ images, timing }) => {
+const HeroSlideshow: FC<HeroSlideshowProps> = ({ images }) => {
   // state
-  const [imageIndex, setImageIndex] = useState(0);
-  const [inProp, setInProp] = useState(false);
-  const nodeRef = useRef(null);
+  const [ activeIndex, setActiveIndex ] = useState(0);
   const headerContent = "bring your best moments to light";
 
-  // side effects
-  useEffect(() => {
-    setInProp(true);
-  }, [imageIndex]);
+  // click handlers
+  const rotatePrevious = () => {
+    const prevIndex = activeIndex === 0 ? 
+      images.length - 1 : activeIndex - 1; 
+    setActiveIndex(prevIndex);
+  }
 
-  // click handler
-  const handleClick = (direction: string, timing: number) => {
-    // set transition 'in' prop to false
-    setInProp(false);
-    // allow time for transition to take place
-    setTimeout(() => {
-      // set current image to next or previous based on direction
-      const nextIndex = imageIndex + 1 === images.length ? 0 : imageIndex + 1;
-      const prevIndex = imageIndex - 1 < 0 ? images.length - 1 : imageIndex - 1;
-      setImageIndex(direction === "right" ? nextIndex : prevIndex);
-    }, timing);
-  };
+  const rotateNext = () => {
+    const nextIndex = activeIndex === images.length - 1 ? 
+      0 : activeIndex + 1; 
+    setActiveIndex(nextIndex);
+  }
 
-  // component elements
   return (
-    <SlideshowWrapper>
-      {imageIndex === 0 && <FadeInHeader content={headerContent} />}
-      <SlideshowContainer>
-        <Transition nodeRef={nodeRef} in={inProp} timeout={timing}>
-          {(state) => (
-            <SlideshowImage
-              src={images[imageIndex].src}
-              alt={images[imageIndex].alt}
-              state={state}
-              timing={timing}
-              ref={nodeRef}
-            />
-          )}
-        </Transition>
+    <SlideshowContainer>
+      {activeIndex === 0 && <FadeInHeader content={headerContent} />}
 
-        <SlideshowButtonContainer>
-          <SlideshowButton
-            onClick={() => handleClick("left", timing)}
-            name="rotate-slideshow-left"
-          >
-            <SlideshowArrowIcon title="left-long" icon={faLeftLong} />
-          </SlideshowButton>
-          <SlideshowButton
-            onClick={() => handleClick("right", timing)}
-            name="rotate-slideshow-left"
-          >
-            <SlideshowArrowIcon title="right-long" icon={faRightLong} />
-          </SlideshowButton>
-        </SlideshowButtonContainer>
-      </SlideshowContainer>
-    </SlideshowWrapper>
+      <SlideshowImageContainer>
+        { images.map((image, index) => (
+          <SlideshowImage
+            key={ image.id }
+            src={ image.src }
+            alt={ image.alt }
+            style={ index === activeIndex ? 
+              { opacity: '1' } : { opacity: '0' }
+            }
+          />
+        ))}
+      </SlideshowImageContainer>
+ 
+      <SlideshowButtonContainer>
+        <SlideshowButton
+          onClick={ rotatePrevious }
+          name="rotate-slideshow-left"
+        >
+          <SlideshowArrowIcon title="left-long" icon={ faLeftLong } />
+        </SlideshowButton>
+        <SlideshowButton
+          onClick={ rotateNext }
+          name="rotate-slideshow-left"
+        >
+          <SlideshowArrowIcon title="right-long" icon={ faRightLong } />
+        </SlideshowButton>
+      </SlideshowButtonContainer>
+    </SlideshowContainer>
+
   );
 };
 

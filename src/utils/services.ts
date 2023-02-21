@@ -21,6 +21,7 @@ export const Services: Service[] = [
       looking to build new or enhance existing news and interview sets, 
       or you require on-field production support, we have got you covered.`,
     image: {
+      id: 17,
       name: "Broadcast Services",
       src: Broadcast,
       alt: "Broadcast Services - Los Angeles Sportsnet Digital Studio",
@@ -33,6 +34,7 @@ export const Services: Service[] = [
       your business. From infrastructure to equipment and control technology 
       we can turn almost any space into a fully functional media center.`,
     image: {
+      id: 18,
       name: "Corporate Solutions",
       src: Corporate,
       alt: "Corporate Solutions - Amazon Digital Studio",
@@ -45,6 +47,7 @@ export const Services: Service[] = [
       technology, and state-of-the-art designs, ensure a seamless experience 
       whether you're on-site for Super Bowl Sunday or in-studio for E-Sports gaming.`,
     image: {
+      id: 19,
       name: "E-Sports and Live Events",
       src: LiveEvents,
       alt: "E-Sports, Live Events and More",
@@ -57,6 +60,7 @@ export const Schematics: Service[] = [
     title: "Design & Integration",
     description: `Schematic for design and integration`,
     image: {
+      id: 20,
       name: "Design & Integration",
       src: DesignIntegration1,
       alt: "Schematic for design and integration",
@@ -66,6 +70,7 @@ export const Schematics: Service[] = [
     title: "Design Schematic",
     description: `Schematic for design and integration`,
     image: {
+      id: 21,
       name: "Design Schematic",
       src: DesignIntegration2,
       alt: "Schematic for design and integration",

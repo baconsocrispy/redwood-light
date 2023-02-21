@@ -10,14 +10,14 @@ import { Image } from "../../../utils/images";
 
 describe("slideshow functionality", () => {
   const testImages: Image[] = [
-    { name: "Image1", src: "image1.jpg", alt: "image1" },
-    { name: "Image2", src: "image2.jpg", alt: "image2" },
-    { name: "Image3", src: "image3.jpg", alt: "image3" },
+    { id: 0, name: "Image1", src: "image1.jpg", alt: "image1" },
+    { id: 1, name: "Image2", src: "image2.jpg", alt: "image2" },
+    { id: 2, name: "Image3", src: "image3.jpg", alt: "image3" },
   ];
 
   test("it starts off with the first image", () => {
     // render slideshow
-    render(<HeroSlideshow images={testImages} timing={500} />);
+    render(<HeroSlideshow images={testImages} />);
 
     // get slideshow image
     const image: HTMLImageElement = screen.getByRole("img", {
@@ -31,7 +31,7 @@ describe("slideshow functionality", () => {
   test("clicking right arrow advances slides forward by one", async () => {
     // setup user and render slideshow with test images
     const user = userEvent.setup();
-    render(<HeroSlideshow images={testImages} timing={500} />);
+    render(<HeroSlideshow images={testImages} />);
 
     // get the right button
     const rightButton = screen.getByRole("button", { name: /right/i });
@@ -51,7 +51,7 @@ describe("slideshow functionality", () => {
   test("clicking left arrow advances slides back to last slide", async () => {
     // setup user and render slideshow with test images
     const user = userEvent.setup();
-    render(<HeroSlideshow images={testImages} timing={500} />);
+    render(<HeroSlideshow images={testImages} />);
 
     // get the left button
     const leftButton = screen.getByRole("button", { name: /left/i });
@@ -71,7 +71,7 @@ describe("slideshow functionality", () => {
   test("advancing from last slide resets image to first slide", async () => {
     // setup user and render slideshow
     const user = userEvent.setup();
-    render(<HeroSlideshow images={testImages} timing={500} />);
+    render(<HeroSlideshow images={testImages} />);
 
     // get the right button
     const rightbutton = screen.getByRole("button", { name: /right/i });
