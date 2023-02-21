@@ -1,12 +1,20 @@
+// external imports
+import { useLocation, useNavigate } from "react-router-dom";
+
 // styles
 import { Copyright, FooterContainer, FooterItem, FooterLink, FooterList } from "./footer.styles"
 
 const Footer = () => {
+  // navigation
+  const navigate = useNavigate();
+  const location = useLocation();
+  const indexPage = location.pathname === '/';
+
   return (
     <FooterContainer>
       <FooterList>
         <FooterItem>
-          <FooterLink href="/#home">Home</FooterLink>
+          <FooterLink href={ indexPage ? "/#home" : '/' }>Home</FooterLink>
         </FooterItem>
         <FooterItem>
           <FooterLink href="/#services">Services</FooterLink>
@@ -22,9 +30,6 @@ const Footer = () => {
         </FooterItem>
         <FooterItem>
           <FooterLink href="/contact">Contact</FooterLink>
-        </FooterItem>
-        <FooterItem>
-          <FooterLink href="sitemap">Sitemap</FooterLink>
         </FooterItem>
       </FooterList>
       <Copyright>&copy;&nbsp;Copyright Redwood Light 2023.</Copyright>

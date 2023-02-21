@@ -1,8 +1,5 @@
-// external imports
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-
-// styles
 import ThemeStyles from "../../utils/theme.styles";
 const { breakpoints, fonts, colors, heights } = ThemeStyles
 

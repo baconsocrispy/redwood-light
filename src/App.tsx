@@ -5,6 +5,7 @@ import { Routes, Route } from "react-router-dom";
 // internal imports
 import Home from "./routes/home/home.component";
 import Navigation from "./components/navigation/navigation.component";
+import NotFound from "./routes/not-found/not-found.component";
 
 // styles
 import { GlobalStyle } from "./global.styles";
@@ -17,7 +18,8 @@ const App = () => {
       <GlobalStyle />
       <Navigation />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route index element={ <Home /> } />
+        <Route path='*' element={ <NotFound />} />
       </Routes>
       <Footer />
     </Fragment>
