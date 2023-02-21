@@ -6,6 +6,7 @@ import Sportsnet from "../assets/images/projects/Sportsnet.jpeg";
 import { Image } from "./images";
 
 export type Project = {
+  id: number;
   name: string;
   client: string;
   category: string;
@@ -15,6 +16,7 @@ export type Project = {
 
 export const Projects: Project[] = [
   {
+    id: 0,
     name: "UFC Apex Studio",
     client: "UFC",
     category: "broadcast",
@@ -27,6 +29,7 @@ export const Projects: Project[] = [
     },
   },
   {
+    id: 1,
     name: "Los Angeles Rams Studio",
     client: "Los Angeles Rams",
     category: "broadcast",
@@ -39,6 +42,7 @@ export const Projects: Project[] = [
     },
   },
   {
+    id: 2,
     name: "WTJV NBC Miami Studio",
     client: "WTJV NBC Miami",
     category: "broadcast",
@@ -51,6 +55,7 @@ export const Projects: Project[] = [
     },
   },
   {
+    id: 3,
     name: "Sportsnet LA Studio",
     client: "Sportsnet LA",
     category: "broadcast",
@@ -60,102 +65,6 @@ export const Projects: Project[] = [
       name: "Sportsnet LA",
       src: Sportsnet,
       alt: "Sportsnet LA studio",
-    },
-  },
-  {
-    name: "Sportsnet LA Studio",
-    client: "Sportsnet LA",
-    category: "corporate",
-    newscastUrl: "https://www.newscaststudio.com/setstudio/ufc-apex-studio/",
-    image: {
-      id: 9,
-      name: "Sportsnet LA",
-      src: Sportsnet,
-      alt: "Sportsnet LA studio",
-    },
-  },
-  {
-    name: "Sportsnet LA Studio",
-    client: "Sportsnet LA",
-    category: "corporate",
-    newscastUrl: "https://www.newscaststudio.com/setstudio/ufc-apex-studio/",
-    image: {
-      id: 10,
-      name: "Sportsnet LA",
-      src: Sportsnet,
-      alt: "Sportsnet LA studio",
-    },
-  },
-  {
-    name: "Sportsnet LA Studio",
-    client: "Sportsnet LA",
-    category: "corporate",
-    newscastUrl: "https://www.newscaststudio.com/setstudio/ufc-apex-studio/",
-    image: {
-      id: 11,
-      name: "Sportsnet LA",
-      src: Sportsnet,
-      alt: "Sportsnet LA studio",
-    },
-  },
-  {
-    name: "Sportsnet LA Studio",
-    client: "Sportsnet LA",
-    category: "corporate",
-    newscastUrl: "https://www.newscaststudio.com/setstudio/ufc-apex-studio/",
-    image: {
-      id: 12,
-      name: "Sportsnet LA",
-      src: Sportsnet,
-      alt: "Sportsnet LA studio",
-    },
-  },
-  {
-    name: "WTJV NBC Miami Studio",
-    client: "WTJV NBC Miami",
-    category: "live event",
-    newscastUrl: "https://www.newscaststudio.com/setstudio/ufc-apex-studio/",
-    image: {
-      id: 13,
-      name: "WTJV NBC Miami Studio",
-      src: Miami,
-      alt: "WTJV NBC Miami Studio",
-    },
-  },
-  {
-    name: "WTJV NBC Miami Studio",
-    client: "WTJV NBC Miami",
-    category: "live event",
-    newscastUrl: "https://www.newscaststudio.com/setstudio/ufc-apex-studio/",
-    image: {
-      id: 14,
-      name: "WTJV NBC Miami Studio",
-      src: Miami,
-      alt: "WTJV NBC Miami Studio",
-    },
-  },
-  {
-    name: "WTJV NBC Miami Studio",
-    client: "WTJV NBC Miami",
-    category: "live event",
-    newscastUrl: "https://www.newscaststudio.com/setstudio/ufc-apex-studio/",
-    image: {
-      id: 15,
-      name: "WTJV NBC Miami Studio",
-      src: Miami,
-      alt: "WTJV NBC Miami Studio",
-    },
-  },
-  {
-    name: "WTJV NBC Miami Studio",
-    client: "WTJV NBC Miami",
-    category: "live event",
-    newscastUrl: "https://www.newscaststudio.com/setstudio/ufc-apex-studio/",
-    image: {
-      id: 16,
-      name: "WTJV NBC Miami Studio",
-      src: Miami,
-      alt: "WTJV NBC Miami Studio",
     },
   },
 ]; 
