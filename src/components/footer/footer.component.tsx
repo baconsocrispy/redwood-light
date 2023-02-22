@@ -22,13 +22,13 @@ const Footer = () => {
           <FooterLink href="/#featured">Featured Projects</FooterLink>
         </FooterItem>
         <FooterItem>
-          <FooterLink href="/team">Team</FooterLink>
+          <FooterLink href="/Team">Team</FooterLink>
         </FooterItem>
         <FooterItem>
-          <FooterLink href="/awards">Awards</FooterLink>
+          <FooterLink href="/Awards">Awards</FooterLink>
         </FooterItem>
         <FooterItem>
-          <FooterLink href="/contact">Contact</FooterLink>
+          <FooterLink href="/Contact">Contact</FooterLink>
         </FooterItem>
       </FooterList>
       <Copyright>&copy;&nbsp;Copyright Redwood Light 2023.</Copyright>

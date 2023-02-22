@@ -4,18 +4,18 @@ import { useNavigate } from "react-router-dom";
 // internal imports
 import { Outlet } from "react-router-dom";
 import RedwoodLogo from "../../assets/images/logo.v1.png";
+import HamburgerMenu from "../hamburger/hamburger.component";
 
 // styles
 import {
   NavigationLogo,
   LogoContainer,
   NavigationContainer,
-  NavigationLink,
-  NavigationLinksContainer,
 } from "./navigation.styles";
 
 // component
 const Navigation = () => {
+  const menuItems = ['Awards', 'Team', 'Contact'];
   // navigation
   const navigate = useNavigate();
 
@@ -29,11 +29,7 @@ const Navigation = () => {
             onClick={() => navigate("/")}
           />
         </LogoContainer>
-        <NavigationLinksContainer>
-          <NavigationLink to="team">Team</NavigationLink>
-          <NavigationLink to="awards">Awards</NavigationLink>
-          <NavigationLink to="contact">Contact</NavigationLink>
-        </NavigationLinksContainer>
+        <HamburgerMenu menuItems={ menuItems } />
       </NavigationContainer>
       <Outlet />
     </>
