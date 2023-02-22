@@ -6,12 +6,16 @@ type HamburgerMenuProps = {
   menuItems: string[];
 }
 const HamburgerMenu: FC<HamburgerMenuProps> = ({ menuItems }) => {
-  const [ open, setOpen ] = useState();
+  // state
+  const [ open, setOpen ] = useState(false);
+
+  // click handler
+  const handleClick = () => setOpen(!open);
 
   return (
-    <Container>
+    <Container onClick={ handleClick }>
       <Hamburger />
-      <Menu>
+      <Menu open={ open }>
         { menuItems.map((item, index) => (
           <MenuItem key={ index }>
             <MenuLink to={ item }>{ item }</MenuLink>

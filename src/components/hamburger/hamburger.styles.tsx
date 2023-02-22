@@ -39,24 +39,46 @@ export const Hamburger = styled.div`
   }
 `
 
-export const Menu = styled.ul`
-  display: none;
+type MenuProps = {
+  open: boolean;
+}
+
+export const Menu = styled.ul<MenuProps>`
+  display: flex;
+  position: absolute;
+
+  top: 8rem;
+  right: ${ (props) => props.open ? '0' : '-100%' };
+
   list-style: none;
-  height: 100%;
+  background-color: ${ colors.redwoodRed };
+  color: ${ colors.white };
+  opacity: ${ (props) => props.open ? '1' : '0' };
+
+  transition: all .5s ease-in-out;
 
   @media (min-width: ${ breakpoints.medium }) {
-    display: flex;
+    position: relative;
+    height: 100%;    
+    top: 0;
+    right: 0;
+    opacity: 1;
+    color: ${ colors.redwoodRed };
+    background-color: transparent;
   }
 `
 
 export const MenuItem = styled.li`
   display: flex;
   align-items: center;
-  height: 100%;
-  padding: 0% 2%;
+  padding: 1rem 1rem;
+
+  @media (min-width: ${ breakpoints.medium }) {
+    padding: 0% 2%;
+  }
 `
 
 export const MenuLink = styled(Link)`
-  color: ${ colors.black };
+  color: currentColor;
   font-size: 1.5rem;
 `
