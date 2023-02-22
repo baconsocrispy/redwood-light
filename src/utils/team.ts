@@ -1,8 +1,7 @@
 // image imports
 import Erik from "../assets/images/team/erik.png";
 import Danny from "../assets/images/team/danny.png";
-import Spinner from '../utils/spinner.svg';
-import Nautical from '../utils/nautical.svg';
+import Light from '../utils/light.svg';
 
 
 import { Image } from "./images";
@@ -23,7 +22,7 @@ export const TeamBios: Bio[] = [
     image: {
       id: 39,
       name: "Steve Mulkey",
-      src: Spinner,
+      src: Light,
       alt: "Steve Mulkey - Co-Owner / Business Development, Redwood Light",
     },
     bio: `For more than 20 years, Steve has been at the forefront of 
@@ -91,7 +90,7 @@ export const TeamBios: Bio[] = [
     image: {
       id: 42,
       name: "David Polcyn",
-      src: Nautical,
+      src: Light,
       alt: "David Polcyn - Project Coordinator / Designer, Redwood Light",
     },
     bio: `David has been involved in theatrical and television lighting for over 

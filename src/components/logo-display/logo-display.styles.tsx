@@ -4,10 +4,19 @@ import ThemeStyles from "../../utils/theme.styles";
 const {colors, fonts, fontSizes, breakpoints} = ThemeStyles;
 
 export const LogoDisplayContainer = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 7.5rem);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 2rem;
   align-items: center;
-  overflow: scroll;
-  padding: 0 1rem;
+  justify-content: center;
+
+  width: auto;
+  margin-top: 3rem;
+
+  @media (min-width: ${ breakpoints.xsmall }) {
+    grid-template-columns: repeat(3, 10rem);
+  }
 `;
 
 export const LogoDisplayHeader = styled.h2`
@@ -25,18 +34,14 @@ export const LogoDisplayHeader = styled.h2`
 `
 
 export const LogoContainer = styled.div`
-  min-width: 8rem;
+  width: 100%;
 
   &:not(:last-child) {
     margin-right: 2rem;
   }
-
-  @media (min-width: ${ breakpoints.medium}) {
-    min-width: 12rem;
-  }
 `
 
 export const Logo = styled.img`
-  display: inline-block;
+  /* display: inline-block; */
   width: 100%;
 `

@@ -34,8 +34,8 @@ export const CardContainer = styled.div`
 
   &:nth-child(even) {
     @media (min-width: ${breakpoints.large}) {
+      margin-left: auto;
       margin-right: 5%;
-      float: right;
     }
   }
 
