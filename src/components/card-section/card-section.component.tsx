@@ -17,7 +17,7 @@ const CardSection: FC<CardSectionProps> = ({ services }) => {
   return (
     <CardSectionContainer>
       {services.map((service, index) => (
-        <Card service={service} key={index} />
+        <Card service={ service } key={ index } />
       ))}
     </CardSectionContainer>
   );

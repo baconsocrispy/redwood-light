@@ -10,6 +10,7 @@ import NotFound from "./routes/not-found/not-found.component";
 // styles
 import { GlobalStyle } from "./global.styles";
 import Footer from "./components/footer/footer.component";
+import Team from "./routes/team/team.component";
 
 // component
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
       <Navigation />
       <Routes>
         <Route index element={ <Home /> } />
+        <Route path='/team' element={ <Team /> } />
         <Route path='*' element={ <NotFound />} />
       </Routes>
       <Footer />

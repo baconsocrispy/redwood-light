@@ -15,6 +15,8 @@ import { Projects } from "../../utils/projects";
 import BackgroundImage from "../../components/background-image/background-image.component";
 import { ContactButton } from "../../components/contact-button/contact-button.component";
 import FeaturedSection from "../../components/featured-static/featured-static.component";
+
+// styles
 import { FooterLink } from "../../components/footer/footer.styles";
 
 

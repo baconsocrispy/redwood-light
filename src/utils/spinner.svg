@@ -1,0 +1,28 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="100" cy="100" r="90" fill="none" stroke-width="10" stroke="#F78C40" />
+  <circle cx="100" cy="100" r="80" fill="none" stroke-width="10" stroke="#C70039">
+    <animateTransform attributeName="transform" type="rotate" from="0 100 100" to="180 100 100" dur="1.5s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="100" cy="100" r="70" fill="none" stroke-width="10" stroke="#900C3F">
+    <animateTransform attributeName="transform" type="rotate" from="0 100 100" to="-180 100 100" dur="1.5s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="100" cy="100" r="60" fill="none" stroke-width="10" stroke="#581845">
+    <animateTransform attributeName="transform" type="rotate" from="0 100 100" to="180 100 100" dur="1.5s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="100" cy="100" r="50" fill="none" stroke-width="10" stroke="#17202A">
+    <animateTransform attributeName="transform" type="rotate" from="0 100 100" to="-180 100 100" dur="1.5s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="100" cy="100" r="40" fill="none" stroke-width="10" stroke="#F78C40">
+    <animateTransform attributeName="transform" type="rotate" from="0 100 100" to="180 100 100" dur="1.5s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="100" cy="100" r="30" fill="none" stroke-width="10" stroke="#C70039">
+    <animateTransform attributeName="transform" type="rotate" from="0 100 100" to="-180 100 100" dur="1.5s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="100" cy="100" r="20" fill="none" stroke-width="10" stroke="#900C3F">
+    <animateTransform attributeName="transform" type="rotate" from="0 100 100" to="180 100 100" dur="1.5s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="100" cy="100" r="10" fill="none" stroke-width="10" stroke="#581845">
+    <animateTransform attributeName="transform" type="rotate" from="0 100 100" to="-180 100 100" dur="1.5s" repeatCount="indefinite" />
+    <animate attributeName="stroke" dur="10s" values="#17202A; #F78C40; #C70039; #900C3F; #581845; #17202A" repeatCount="indefinite" />
+  </circle>
+</svg>
