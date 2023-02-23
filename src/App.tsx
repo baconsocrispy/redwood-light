@@ -5,12 +5,13 @@ import { Routes, Route } from "react-router-dom";
 // internal imports
 import Home from "./routes/home/home.component";
 import Navigation from "./components/navigation/navigation.component";
+import Awards from "./routes/awards/awards.component";
+import Team from "./routes/team/team.component";
 import NotFound from "./routes/not-found/not-found.component";
+import Footer from "./components/footer/footer.component";
 
 // styles
 import { GlobalStyle } from "./global.styles";
-import Footer from "./components/footer/footer.component";
-import Team from "./routes/team/team.component";
 
 // component
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
       <Navigation />
       <Routes>
         <Route index element={ <Home /> } />
+        <Route path='/awards' element={ <Awards /> } />
         <Route path='/team' element={ <Team /> } />
         <Route path='*' element={ <NotFound />} />
       </Routes>
