@@ -19,7 +19,6 @@ import FeaturedSection from "../../components/featured-static/featured-static.co
 // styles
 import { FooterLink } from "../../components/footer/footer.styles";
 
-
 // components
 const Home = () => {
   const bgImage1 = Schematics[0].image;

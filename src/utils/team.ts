@@ -1,7 +1,7 @@
 // image imports
 import Erik from "../assets/images/team/erik.png";
 import Danny from "../assets/images/team/danny.png";
-import Light from '../utils/light.svg';
+import Light from '../components/spinner/svg/light.svg';
 
 
 import { Image } from "./images";
