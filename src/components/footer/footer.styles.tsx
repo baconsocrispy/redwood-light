@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import ThemeStyles from "../../utils/theme.styles";
 
 const { colors, fonts, fontSizes } = ThemeStyles;
@@ -26,7 +27,23 @@ export const FooterItem = styled.li`
   padding: .5rem;
 `
 
-export const FooterLink = styled.a`
+export const FooterLink = styled(Link)`
+  cursor: pointer;
+  display: block;
+  transition: all .2s;
+
+  &:link,
+  &:visited {
+    color: currentColor;
+  }
+
+  &:hover,
+  &:active {
+    transform: skewX(-15deg);
+  }
+`
+
+export const FooterAnchor = styled.a`
   cursor: pointer;
   display: block;
   transition: all .2s;

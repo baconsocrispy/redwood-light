@@ -29,7 +29,7 @@ const Home = () => {
       <PageSection id='home'>
         <HeroSlideshow images={ HeroImages } />
         <ContactButton>
-          <FooterLink href="/contact">Contact Us</FooterLink>
+          <FooterLink to="/contact">Contact Us</FooterLink>
         </ContactButton>
       </PageSection>
       <PageSection id="services">
