@@ -1,12 +1,18 @@
 import styled from "styled-components";
 import ThemeStyles from "../../utils/theme.styles";
 
-const { colors, fonts, fontSizes } = ThemeStyles;
+const { colors, fonts, fontSizes, breakpoints } = ThemeStyles;
 
 export const AwardsProjectContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin: 0 auto;
+  width: 90%;
+  margin-bottom: 2rem;
+
+  @media (min-width: ${ breakpoints.small }) {
+    width: auto;
+  }
 `
 
 export const AwardsImageContainer = styled.div`
