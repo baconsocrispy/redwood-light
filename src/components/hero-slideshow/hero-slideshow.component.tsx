@@ -4,9 +4,11 @@ import { faRightLong, faLeftLong } from "@fortawesome/free-solid-svg-icons";
 
 // internal imports
 import FadeInHeader from "../fade-in-header/fade-in-header.component";
+import Breadcrumb from "../breadcrumb/breadcrumb.component";
 
 // styles
 import {
+  Breadcrumbs,
   SlideshowArrowIcon,
   SlideshowButton,
   SlideshowButtonContainer,
@@ -71,8 +73,13 @@ const HeroSlideshow: FC<HeroSlideshowProps> = ({ images }) => {
           <SlideshowArrowIcon title="right-long" icon={ faRightLong } />
         </SlideshowButton>
       </SlideshowButtonContainer>
-    </SlideshowContainer>
 
+      <Breadcrumbs>
+        { images.map((image, index) => (
+          <Breadcrumb active={ index === activeIndex } key={ image.id } />
+        ))}
+      </Breadcrumbs>
+    </SlideshowContainer>
   );
 };
 

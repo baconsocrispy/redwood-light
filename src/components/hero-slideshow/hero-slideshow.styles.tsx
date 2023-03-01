@@ -6,7 +6,6 @@ export const SlideshowContainer = styled.div`
   position: relative;
   width: 100%;
   height: 30rem;
-  display: block;
   overflow: hidden;
 
   @media only screen and (min-width: ${ Breakpoints.medium }) {
@@ -60,3 +59,11 @@ export const SlideshowArrowIcon = styled(FontAwesomeIcon)`
     opacity: .7;
   }
 `;
+
+export const Breadcrumbs = styled.div`
+  display: flex;
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+`
