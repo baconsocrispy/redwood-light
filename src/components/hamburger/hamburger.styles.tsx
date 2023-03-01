@@ -1,8 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import ThemeStyles from "../../utils/theme.styles";
-
-const { breakpoints, colors } = ThemeStyles;
+import { Breakpoints, Colors } from "../../utils/theme.styles";
 
 export const Container = styled.div`
   cursor: pointer;
@@ -15,7 +13,7 @@ export const Hamburger = styled.div`
   width: 3rem;
   height: 2px;
   
-  background-color: ${ colors.redwoodRed };
+  background-color: ${ Colors.redwoodRed };
 
   &::after,
   &::before {
@@ -34,7 +32,7 @@ export const Hamburger = styled.div`
     transform: translateY(.6rem);
   }
 
-  @media (min-width: ${ breakpoints.medium }) {
+  @media (min-width: ${ Breakpoints.medium }) {
     display: none;
   }
 `
@@ -51,19 +49,19 @@ export const Menu = styled.ul<MenuProps>`
   right: ${ (props) => props.open ? '0' : '-100%' };
 
   list-style: none;
-  background-color: ${ colors.redwoodRed };
-  color: ${ colors.white };
+  background-color: ${ Colors.redwoodRed };
+  color: ${ Colors.white };
   opacity: ${ (props) => props.open ? '1' : '0' };
 
   transition: all .5s ease-in-out;
 
-  @media (min-width: ${ breakpoints.medium }) {
+  @media (min-width: ${ Breakpoints.medium }) {
     position: relative;
     height: 100%;    
     top: 0;
     right: 0;
     opacity: 1;
-    color: ${ colors.redwoodRed };
+    color: ${ Colors.redwoodRed };
     background-color: transparent;
     transition: none;
   }
@@ -74,7 +72,7 @@ export const MenuItem = styled.li`
   align-items: center;
   padding: 1rem 1rem;
 
-  @media (min-width: ${ breakpoints.medium }) {
+  @media (min-width: ${ Breakpoints.medium }) {
     padding: 0% 2%;
   }
 `

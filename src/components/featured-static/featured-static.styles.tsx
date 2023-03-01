@@ -1,7 +1,10 @@
 import styled from "styled-components";
-import ThemeStyles from "../../utils/theme.styles";
-
-const { colors, fonts, fontSizes, breakpoints } = ThemeStyles;
+import { 
+  Colors, 
+  Fonts, 
+  FontSizes, 
+  Breakpoints 
+} from "../../utils/theme.styles";
 
 export const FeaturedProjectsContainer = styled.div`
   width: 95%;
@@ -18,9 +21,9 @@ export const FeaturedHeader = styled.h2`
   width: 95%;
   text-align: center;
   text-transform: uppercase;
-  font-family: ${fonts.secondary};
-  font-size: ${fontSizes.sectionHeader};
-  color: ${colors.black};
+  font-family: ${ Fonts.secondary };
+  font-size: ${ FontSizes.sectionHeader };
+  color: ${ Colors.black };
   margin: 0 auto;
 `;
 
@@ -28,7 +31,7 @@ export const SelectionBarContainer = styled.div`
   margin-top: 2rem;
   display: flex;
 
-  @media (min-width: ${breakpoints.small}) {
+  @media (min-width: ${ Breakpoints.small }) {
     width: 95%;
     justify-content: space-evenly;
   }
@@ -42,16 +45,16 @@ export const SelectionBarOption = styled.button`
   flex: 1;
 
   &:nth-child(odd) {
-    background-color: ${colors.redwoodRed};
-    color: ${colors.white};
+    background-color: ${ Colors.redwoodRed };
+    color: ${ Colors.white };
   }
 
   &:nth-child(even) {
-    background-color: ${colors.white};
-    color: ${colors.redwoodRed};
+    background-color: ${ Colors.white };
+    color: ${ Colors.redwoodRed };
   }
 
-  @media (min-width: ${breakpoints.small}) {
+  @media (min-width: ${ Breakpoints.small }) {
     flex: 0;
     white-space: nowrap;
   }
@@ -61,8 +64,8 @@ export const TouchscreenAlert = styled.div`
   display: none;
   margin-top: 2rem;
   text-align: center;
-  font-size: ${fontSizes.mobileCopy};
-  color: ${colors.black};
+  font-size: ${ FontSizes.mobileCopy };
+  color: ${ Colors.black };
   transform: skewX(-15deg);
   text-transform: uppercase;
 

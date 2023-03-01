@@ -1,7 +1,10 @@
 import styled from "styled-components";
-import ThemeStyles from "../../utils/theme.styles";
-
-const { colors, fonts, fontSizes, breakpoints } = ThemeStyles;
+import { 
+  Colors, 
+  Fonts, 
+  FontSizes, 
+  Breakpoints 
+} from "../../utils/theme.styles";
 
 export const TextSectionContainer = styled.div`
   position: relative;
@@ -11,28 +14,28 @@ export const TextSectionContainer = styled.div`
   background: transparent;
 
 
-  @media (min-width: ${ breakpoints.medium }) {
+  @media (min-width: ${ Breakpoints.medium }) {
     width: 65%;
   }
 `
 
 export const TextSectionHeader = styled.h2`
-  font-family: ${ fonts.secondary };
-  color: ${ colors.black };
-  font-size: ${ fontSizes.mobileSectionHeader };
+  font-family: ${ Fonts.secondary };
+  color: ${ Colors.black };
+  font-size: ${ FontSizes.mobileSectionHeader };
   text-transform: uppercase;
   margin-bottom: 2rem;
 
-  @media (min-width: ${ breakpoints.medium }) {
-    font-size: ${ fontSizes.sectionHeader };
+  @media (min-width: ${ Breakpoints.medium }) {
+    font-size: ${ FontSizes.sectionHeader };
   }
 `
 
 export const TextSectionParagraph = styled.p`
-  font-family: ${ fonts.primary };
-  font-size: ${ fontSizes.mobileCopy };
+  font-family: ${ Fonts.primary };
+  font-size: ${ FontSizes.mobileCopy };
 
-  @media (min-width: ${ breakpoints.medium }) {
-    font-size: ${ fontSizes.copy };
+  @media (min-width: ${ Breakpoints.medium }) {
+    font-size: ${ FontSizes.copy };
   }
 `

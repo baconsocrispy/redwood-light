@@ -1,7 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import ThemeStyles from "./utils/theme.styles";
-
-const { heights } = ThemeStyles;
+import { Heights } from "./utils/theme.styles";
 
 export const GlobalStyle = createGlobalStyle`
   *,
@@ -19,7 +17,7 @@ export const GlobalStyle = createGlobalStyle`
   
   body {
     box-sizing: border-box;
-    margin-top: ${heights.navHeight}; // offset body to accommodate fixed header
+    margin-top: ${ Heights.navHeight }; // offset body to accommodate fixed header
   }
 
   a {

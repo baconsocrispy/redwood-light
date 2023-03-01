@@ -1,6 +1,14 @@
 // styles
-import { Copyright, FooterAnchor, FooterContainer, FooterItem, FooterLink, FooterList } from "./footer.styles"
+import { 
+  Copyright, 
+  FooterAnchor, 
+  FooterContainer, 
+  FooterItem, 
+  FooterLink, 
+  FooterList 
+} from "./footer.styles"
 
+// component
 const Footer = () => {
 
   return (

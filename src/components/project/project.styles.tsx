@@ -1,9 +1,7 @@
 import { Link } from "react-router-dom";
 
 import styled from "styled-components";
-import ThemeStyles from "../../utils/theme.styles";
-
-const { colors, fonts, fontSizes } = ThemeStyles;
+import { Colors, Fonts, FontSizes } from "../../utils/theme.styles";
 
 export const ProjectHeader = styled.h3`
   position: absolute;
@@ -11,9 +9,9 @@ export const ProjectHeader = styled.h3`
   left: 50%;
   width: 100%;
   transform: translate(-55%, -50%);
-  color: ${colors.white};
-  font-family: ${fonts.secondary};
-  font-size: ${fontSizes.sectionHeader};
+  color: ${ Colors.white };
+  font-family: ${ Fonts.secondary };
+  font-size: ${ FontSizes.sectionHeader };
   text-align: center;
   opacity: 0;
   transition: all 1s ease-in-out;
@@ -25,12 +23,12 @@ export const LearnMoreButton = styled(Link)`
   left: 50%;
   bottom: 10%;
   transform: translate(-50%, -50%) skewX(-15deg);
-  color: ${colors.white};
+  color: ${ Colors.white };
   text-transform: uppercase;
-  border-bottom: 2px solid ${colors.white};
+  border-bottom: 2px solid ${ Colors.white };
   padding-bottom: .5rem;
-  font-family: ${fonts.secondary};
-  font-size: ${fontSizes.copy};
+  font-family: ${ Fonts.secondary };
+  font-size: ${ FontSizes.copy };
   transition: all 1s ease-in-out;
 
   // hide while mouseoff
@@ -58,17 +56,17 @@ export const ProjectContainer = styled.div`
   box-shadow: 2rem 2rem 10rem rgba(0, 0, 0, 0.3);
   overflow: hidden;
 
-  &:hover ${ProjectImageContainer} {
+  &:hover ${ ProjectImageContainer } {
     filter: blur(5px) brightness(75%);
   }
 
-  &:hover ${ProjectHeader} {
+  &:hover ${ ProjectHeader } {
     /* filter: blur(4px) brightness(0.5); */
     opacity: 1;
     transform: translate(-50%, -50%);
   }
 
-  &:hover ${LearnMoreButton} {
+  &:hover ${ LearnMoreButton } {
     opacity: 1;
     visibility: visible;
     transform: translate(-50%, -75%) skewX(-15deg);

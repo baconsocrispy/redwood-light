@@ -1,7 +1,5 @@
 import styled from "styled-components";
-import ThemeStyles from "../../utils/theme.styles";
-
-const {colors, fonts} = ThemeStyles;
+import { Colors, Fonts } from "../../utils/theme.styles";
 
 export const ContactButton = styled.button`
   position: fixed;
@@ -10,9 +8,9 @@ export const ContactButton = styled.button`
   width: 10rem;
   right: 4rem;
   bottom: 2rem;
-  border: 1px solid ${colors.redwoodRed};
-  color: ${colors.redwoodRed};
-  font-family: ${fonts.secondary};
+  border: 1px solid ${ Colors.redwoodRed };
+  color: ${ Colors.redwoodRed };
+  font-family: ${ Fonts.secondary };
   text-transform: uppercase;
   text-align: center;
   white-space: nowrap;

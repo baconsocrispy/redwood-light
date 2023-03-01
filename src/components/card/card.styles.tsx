@@ -1,7 +1,10 @@
 import styled from "styled-components";
-import ThemeStyles from "../../utils/theme.styles";
-
-const { breakpoints, colors, fonts, fontSizes } = ThemeStyles;
+import { 
+  Breakpoints, 
+  Colors, 
+  Fonts, 
+  FontSizes 
+} from "../../utils/theme.styles";
 
 export const CardContainer = styled.div`
   position: relative;
@@ -12,7 +15,7 @@ export const CardContainer = styled.div`
   margin-bottom: 5rem;
   padding-bottom: 3rem;
 
-  color: ${colors.black};
+  color: ${ Colors.black };
   
   background-color: rgba(255, 255, 255, 0.5);
   box-shadow: 2rem 2rem 10rem rgba(0, 0, 0, 0.3);
@@ -27,28 +30,28 @@ export const CardContainer = styled.div`
   }
 
   &:nth-child(odd) {
-    @media (min-width: ${breakpoints.large}) {
+    @media (min-width: ${ Breakpoints.large }) {
       margin-left: 5%;
     }
   }
 
   &:nth-child(even) {
-    @media (min-width: ${breakpoints.large}) {
+    @media (min-width: ${ Breakpoints.large }) {
       margin-left: auto;
       margin-right: 5%;
     }
   }
 
-  @media (min-width: ${breakpoints.large}) {
+  @media (min-width: ${ Breakpoints.large }) {
     width: 75rem;
     height: 30rem;
   }
 
-  @media (min-width: ${breakpoints.medium}) {
+  @media (min-width: ${ Breakpoints.medium }) {
     height: 31rem;
   }
 
-  @media (min-width: ${breakpoints.small}) {
+  @media (min-width: ${ Breakpoints.small }) {
     display: block;
   }
 `;
@@ -56,19 +59,19 @@ export const CardContainer = styled.div`
 export const CardHeader = styled.h3`
   margin-top: 1rem;
 
-  color: ${colors.black};
+  color: ${ Colors.black };
   text-align: center;
   text-transform: uppercase;
-  font-family: ${fonts.secondary};
-  font-size: ${fontSizes.subHeader};
+  font-family: ${ Fonts.secondary };
+  font-size: ${ FontSizes.subHeader };
 
-  @media (min-width: ${breakpoints.medium}) {
+  @media (min-width: ${ Breakpoints.medium }) {
     position: absolute;
     top: 2rem;
     right: 2rem;
   }
 
-  @media (min-width: ${breakpoints.small}) {
+  @media (min-width: ${ Breakpoints.small }) {
     text-align: left;
     margin-left: 1rem;
   }
@@ -85,12 +88,12 @@ export const CardImageContainer = styled.figure`
   clip-path: circle(50% at 50% 50%);
   
 
-  @media (min-width: ${breakpoints.medium}) {
+  @media (min-width: ${ Breakpoints.medium }) {
     width: 25rem;
     height: 25rem;
   }
 
-  @media (min-width: ${breakpoints.small}) {
+  @media (min-width: ${ Breakpoints.small }) {
     margin-top: 2.5rem;
     margin-left: 5%;
     float: left;
@@ -111,15 +114,15 @@ export const CardDescription = styled.p`
   text-align: center;
   margin-top: 3rem;
   padding: 0 3rem;
-  font-family: ${fonts.primary};
-  font-size: ${fontSizes.mobileCopy};
+  font-family: ${ Fonts.primary };
+  font-size: ${ FontSizes.mobileCopy };
 
-  @media (min-width: ${breakpoints.medium}) {
-    font-size: ${fontSizes.copy};
+  @media (min-width: ${ Breakpoints.medium }) {
+    font-size: ${ FontSizes.copy };
     margin-top: 7rem;
   }
 
-  @media (min-width: ${breakpoints.small}) {
+  @media (min-width: ${ Breakpoints.small }) {
     text-align: left;
   }
 `;
@@ -129,16 +132,16 @@ export const CardButton = styled.button`
   margin-top: 3rem;
   background: none;
   border: none;
-  border-bottom: 2px solid ${colors.redwoodRed};
-  color: ${colors.redwoodRed};
-  font-family: ${fonts.secondary};
+  border-bottom: 2px solid ${ Colors.redwoodRed };
+  color: ${ Colors.redwoodRed };
+  font-family: ${ Fonts.secondary };
   text-transform: uppercase;
 
   &:hover {
     background-color: rgba(0, 0, 0, .2);
   }
 
-  @media (min-width: ${breakpoints.small}) {
+  @media (min-width: ${ Breakpoints.small }) {
     position: absolute;
     bottom: 2rem;
     right: 4rem;

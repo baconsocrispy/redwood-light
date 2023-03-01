@@ -1,8 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import ThemeStyles from "../../utils/theme.styles";
-
-const { colors, fonts, fontSizes } = ThemeStyles;
+import { Colors, Fonts, FontSizes } from "../../utils/theme.styles";
 
 export const FooterContainer = styled.footer`
   display: flex;
@@ -10,11 +8,11 @@ export const FooterContainer = styled.footer`
   align-items: center;
   justify-content: space-between;
   
-  background-color: ${ colors.redwoodRed };
+  background-color: ${ Colors.redwoodRed };
 
-  color: ${ colors.white  };
-  font-size: ${ fontSizes.copy };
-  font-family: ${ fonts.primary };
+  color: ${ Colors.white  };
+  font-size: ${ FontSizes.copy };
+  font-family: ${ Fonts.primary };
   text-align: center;
 `
 
@@ -50,7 +48,7 @@ export const FooterAnchor = styled.a`
 `
 
 export const Copyright = styled.div`
-  font-size: ${ fontSizes.mobileCopy };
+  font-size: ${ FontSizes.mobileCopy };
   transform: skewX(-15deg);
   margin-bottom: 2rem;
 `

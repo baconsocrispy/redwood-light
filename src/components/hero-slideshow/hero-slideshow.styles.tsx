@@ -1,8 +1,6 @@
 import styled from "styled-components";
-import ThemeStyles from "../../utils/theme.styles";
+import { Breakpoints } from "../../utils/theme.styles";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-const { breakpoints } = ThemeStyles;
 
 export const SlideshowContainer = styled.div`
   position: relative;
@@ -11,7 +9,7 @@ export const SlideshowContainer = styled.div`
   display: block;
   overflow: hidden;
 
-  @media only screen and (min-width: ${ breakpoints.medium }) {
+  @media only screen and (min-width: ${ Breakpoints.medium }) {
     min-height: 55rem;
   }
 `;
@@ -28,7 +26,7 @@ export const SlideshowImage = styled.img`
   transition: opacity 1s ease-in-out;
   background-position: bottom;
 
-  @media (min-width: ${breakpoints.medium}) {
+  @media (min-width: ${ Breakpoints.medium }) {
     height: 70rem;
   }
 `;
@@ -58,7 +56,7 @@ export const SlideshowArrowIcon = styled(FontAwesomeIcon)`
     opacity: 1;
   }
 
-  @media (min-width: ${breakpoints.medium}) {
+  @media (min-width: ${ Breakpoints.medium }) {
     opacity: .7;
   }
 `;

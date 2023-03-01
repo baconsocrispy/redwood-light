@@ -1,7 +1,10 @@
 import styled from "styled-components";
-import ThemeStyles from "../../utils/theme.styles";
-
-const { colors, fonts, fontSizes, breakpoints } = ThemeStyles;
+import { 
+  Colors, 
+  Fonts, 
+  FontSizes, 
+  Breakpoints 
+} from "../../utils/theme.styles";
 
 export const AwardsProjectContainer = styled.div`
   display: flex;
@@ -10,7 +13,7 @@ export const AwardsProjectContainer = styled.div`
   width: 90%;
   margin-bottom: 2rem;
 
-  @media (min-width: ${ breakpoints.small }) {
+  @media (min-width: ${ Breakpoints.small }) {
     width: auto;
   }
 `
@@ -36,10 +39,10 @@ export const ContentContainer = styled.div`
 
 export const AwardsTitle = styled.h3`
   display: inline-block;
-  font-family: ${ fonts.secondary };
+  font-family: ${ Fonts.secondary };
   text-transform: uppercase;
-  font-size: ${ fontSizes.copy };
-  color: ${ colors.black };
+  font-size: ${ FontSizes.copy };
+  color: ${ Colors.black };
 `
 
 export const AwardsButton = styled.a`
@@ -47,9 +50,9 @@ export const AwardsButton = styled.a`
   display: inline-block;
   background: none;
   border: none;
-  border-bottom: 2px solid ${ colors.redwoodRed };
-  color: ${ colors.redwoodRed };
-  font-family: ${ fonts.secondary };
+  border-bottom: 2px solid ${ Colors.redwoodRed };
+  color: ${ Colors.redwoodRed };
+  font-family: ${ Fonts.secondary };
   text-transform: uppercase;
   align-self: center;
   font-style: italic;

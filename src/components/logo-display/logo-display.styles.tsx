@@ -1,7 +1,10 @@
 import styled from "styled-components";
-import ThemeStyles from "../../utils/theme.styles";
-
-const {colors, fonts, fontSizes, breakpoints} = ThemeStyles;
+import {
+  Colors, 
+  Fonts, 
+  FontSizes, 
+  Breakpoints
+} from "../../utils/theme.styles";
 
 export const LogoDisplayContainer = styled.div`
   display: grid;
@@ -14,7 +17,7 @@ export const LogoDisplayContainer = styled.div`
   width: auto;
   margin-top: 3rem;
 
-  @media (min-width: ${ breakpoints.xsmall }) {
+  @media (min-width: ${ Breakpoints.xsmall }) {
     grid-template-columns: repeat(3, 10rem);
   }
 `;
@@ -22,9 +25,9 @@ export const LogoDisplayContainer = styled.div`
 export const LogoDisplayHeader = styled.h2`
   display: block;
   text-transform: uppercase;
-  font-family: ${fonts.secondary};
-  color: ${colors.black};
-  font-size: ${fontSizes.sectionHeader};
+  font-family: ${ Fonts.secondary };
+  color: ${ Colors.black };
+  font-size: ${ FontSizes.sectionHeader };
   text-align: center;
   margin-bottom: 1rem;
 `

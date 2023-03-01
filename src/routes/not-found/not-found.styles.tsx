@@ -1,7 +1,5 @@
 import styled from "styled-components";
-import ThemeStyles from "../../utils/theme.styles";
-
-const { colors, fonts, fontSizes } = ThemeStyles;
+import { Colors, Fonts, FontSizes } from "../../utils/theme.styles";
 
 export const NotFoundContainer = styled.div`
   display: flex;
@@ -10,17 +8,17 @@ export const NotFoundContainer = styled.div`
   justify-content: center;
   width: 100%;
   height: 30rem;
-  color: ${ colors.redwoodRed };
+  color: ${ Colors.redwoodRed };
   text-align: center;
-  font-family: ${ fonts.secondary };
-  font-size: ${ fontSizes.sectionHeader };
+  font-family: ${ Fonts.secondary };
+  font-size: ${ FontSizes.sectionHeader };
 
   a:link,
   a:visited {
     color: currentColor;
     text-decoration: underline;
     font-style: italic;
-    font-size: ${ fontSizes.copy };
+    font-size: ${ FontSizes.copy };
 
     &:hover {
       background-color: rgba(0, 0, 0, .2);

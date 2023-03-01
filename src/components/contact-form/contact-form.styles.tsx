@@ -1,7 +1,10 @@
 import styled from "styled-components";
-import ThemeStyles from "../../utils/theme.styles";
-
-const { fontSizes, fonts, colors, breakpoints } = ThemeStyles;
+import { 
+  FontSizes, 
+  Fonts, 
+  Colors, 
+  Breakpoints 
+} from "../../utils/theme.styles";
 
 export const ContactFormContainer = styled.div`
   display: flex;
@@ -9,7 +12,7 @@ export const ContactFormContainer = styled.div`
   flex-direction: column;
   padding: 5rem 0;
 
-  @media (min-width: ${ breakpoints.small }) {
+  @media (min-width: ${ Breakpoints.small }) {
     padding: 10rem;
   }
 `
@@ -17,9 +20,9 @@ export const ContactFormContainer = styled.div`
 export const ContactFormHeader = styled.h2`
   text-align: center;
   text-transform: uppercase;
-  color: ${ colors.black };
-  font-family: ${ fonts.secondary };
-  font-size: ${ fontSizes.sectionHeader };
+  color: ${ Colors.black };
+  font-family: ${ Fonts.secondary };
+  font-size: ${ FontSizes.sectionHeader };
   margin-bottom: 2rem;
 `
 
@@ -28,14 +31,14 @@ export const Form = styled.form`
   flex-direction: column;
   width: 90%;
 
-  @media (min-width: ${ breakpoints.small }) {
+  @media (min-width: ${ Breakpoints.small }) {
     width: 30rem;
   }
 `
 
 export const FormLabel = styled.label`
-  font-size: ${ fontSizes.copy };
-  font-family: ${ fonts.primary };
+  font-size: ${ FontSizes.copy };
+  font-family: ${ Fonts.primary };
 `
 
 export const FormInput = styled.input`
@@ -49,9 +52,9 @@ export const FormTextArea = styled.textarea`
 
 export const FormButton = styled.button`
   cursor: pointer;
-  background-color: ${ colors.redwoodRed };
+  background-color: ${ Colors.redwoodRed };
   border: none;
-  color: ${ colors.white };
+  color: ${ Colors.white };
   align-self: center;
   padding: 1rem;
   width: auto;
@@ -59,16 +62,16 @@ export const FormButton = styled.button`
   border-radius: 3px;
 
   &:hover {
-    background-color: ${ colors.black };
+    background-color: ${ Colors.black };
   }
 `
 
 export const FormErrorMessage = styled.h3`
-  color: ${ colors.redwoodRed };
+  color: ${ Colors.redwoodRed };
   text-transform: uppercase;
 `
 
 export const FormSuccessMessage = styled.h3`
-  color: ${ colors.green };
+  color: ${ Colors.green };
   text-transform: uppercase;
 `
