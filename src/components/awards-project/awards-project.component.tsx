@@ -12,7 +12,7 @@ import {
 } from "./awards-project.styles";
 
 //types
-import { Project } from "../../utils/data-objects"
+import { Project } from "../../utils/data-objects";
 type AwardsProjectProps = {
   project: Project;
 };
