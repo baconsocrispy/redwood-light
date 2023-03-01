@@ -65,6 +65,7 @@ export const Menu = styled.ul<MenuProps>`
     opacity: 1;
     color: ${ colors.redwoodRed };
     background-color: transparent;
+    transition: none;
   }
 `
 
