@@ -1,10 +1,21 @@
+// external imports
 import { useState, FC } from "react"
-import { Container, Hamburger, Menu, MenuItem, MenuLink } from "./hamburger.styles"
+
+// styles
+import { 
+  Container, 
+  Hamburger, 
+  Menu, 
+  MenuItem, 
+  MenuLink 
+} from "./hamburger.styles"
 
 // types
 type HamburgerMenuProps = {
   menuItems: string[];
 }
+
+// component
 const HamburgerMenu: FC<HamburgerMenuProps> = ({ menuItems }) => {
   // state
   const [ open, setOpen ] = useState(false);
@@ -18,7 +29,7 @@ const HamburgerMenu: FC<HamburgerMenuProps> = ({ menuItems }) => {
       <Menu open={ open }>
         { menuItems.map((item, index) => (
           <MenuItem key={ index }>
-            <MenuLink to={ '/' + item.toLowerCase() }>{ item }</MenuLink>
+            <MenuLink to={ item.toLowerCase() }>{ item }</MenuLink>
           </MenuItem>
         ))}
       </Menu>

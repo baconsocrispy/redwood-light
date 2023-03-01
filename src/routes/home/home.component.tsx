@@ -4,6 +4,9 @@ import HeroSlideshow from "../../components/hero-slideshow/hero-slideshow.compon
 import LogoDisplay from "../../components/logo-display/logo-display.component";
 import { PageSection } from "../../components/page-section/page-section.component";
 import TextSection from "../../components/text-section/text-section.component";
+import BackgroundImage from "../../components/background-image/background-image.component";
+import { ContactButton } from "../../components/contact-button/contact-button.component";
+import FeaturedSection from "../../components/featured-static/featured-static.component";
 
 // api
 import { HeroImages } from "../../utils/images";
@@ -11,10 +14,9 @@ import { ClientLogos } from "../../utils/logos";
 import { Services, Schematics } from "../../utils/services";
 import { Projects } from "../../utils/projects";
 
-// internal imports
-import BackgroundImage from "../../components/background-image/background-image.component";
-import { ContactButton } from "../../components/contact-button/contact-button.component";
-import FeaturedSection from "../../components/featured-static/featured-static.component";
+// assets
+import { HomeHeaderCopy } from "../../components/text-section/copy/copy";
+import { HomeBodyCopy } from "../../components/text-section/copy/copy";
 
 // styles
 import { FooterLink } from "../../components/footer/footer.styles";
@@ -34,7 +36,7 @@ const Home = () => {
       </PageSection>
       <PageSection id="services">
         <BackgroundImage image={ bgImage1 } />
-        <TextSection />
+        <TextSection headerText={ HomeHeaderCopy} bodyText={ HomeBodyCopy} />
         <CardSection services={ Services } />
       </PageSection>
       <PageSection id="featured">
