@@ -2,7 +2,7 @@
 import { FC } from "react";
 
 // types
-import { Bio } from "../../utils/team";
+import { Bio } from "../../utils/data-objects";
 
 // styles
 import {

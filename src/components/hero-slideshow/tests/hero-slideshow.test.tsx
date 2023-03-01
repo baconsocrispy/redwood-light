@@ -6,7 +6,7 @@ import userEvent from "@testing-library/user-event";
 import HeroSlideshow from "../hero-slideshow.component";
 
 // types
-import { Image } from "../../../utils/images";
+import { Image } from "../../../utils/data-objects";
 
 describe("slideshow functionality", () => {
   const testImages: Image[] = [

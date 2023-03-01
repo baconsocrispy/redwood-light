@@ -16,7 +16,7 @@ import {
 } from "./hero-slideshow.styles";
 
 // types
-import { Image } from "../../utils/images";
+import { Image } from "../../utils/data-objects";
 type HeroSlideshowProps = {
   images: Image[];
 };

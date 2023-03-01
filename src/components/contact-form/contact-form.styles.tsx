@@ -69,6 +69,6 @@ export const FormErrorMessage = styled.h3`
 `
 
 export const FormSuccessMessage = styled.h3`
-  color: green;
+  color: ${ colors.green };
   text-transform: uppercase;
 `

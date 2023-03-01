@@ -1,4 +1,5 @@
 // internal imports
+import BackgroundImage from "../../components/background-image/background-image.component"
 import { PageSection } from "../../components/page-section/page-section.component"
 import TextSection from "../../components/text-section/text-section.component"
 import FeaturedAwards from "../../components/featured-awards/featured-awards.component"
@@ -8,9 +9,8 @@ import {
   AwardsBodyCopy, 
   AwardsHeaderCopy 
 } from "../../components/text-section/copy/copy"
-import { AwardsProjects } from "../../utils/projects"
-import { Schematics } from "../../utils/services"
-import BackgroundImage from "../../components/background-image/background-image.component"
+import { AwardsProjects, Schematics } from "../../utils/data-objects"
+
 
 // component
 const Awards = () => {

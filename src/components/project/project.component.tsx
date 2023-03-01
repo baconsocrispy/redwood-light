@@ -11,7 +11,7 @@ import {
 } from "./project.styles";
 
 //types
-import { Project } from "../../utils/projects";
+import { Project } from "../../utils/data-objects";
 type ProjectProps = {
   project: Project;
 };

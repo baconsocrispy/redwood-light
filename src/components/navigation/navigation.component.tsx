@@ -15,7 +15,9 @@ import {
 
 // component
 const Navigation = () => {
+  const logo = process.env.PUBLIC_URL + 'logo.v1.png';
   const menuItems = ['Awards', 'Team', 'Contact'];
+
   // navigation
   const navigate = useNavigate();
 
@@ -24,7 +26,7 @@ const Navigation = () => {
       <NavigationContainer>
         <LogoContainer>
           <NavigationLogo
-            src={RedwoodLogo}
+            src={ logo }
             alt="Redwood Lighting Main Logo"
             onClick={() => navigate("/")}
           />

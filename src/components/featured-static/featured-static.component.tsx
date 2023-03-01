@@ -12,7 +12,7 @@ import {
 } from "./featured-static.styles";
 
 // types
-import { Project } from "../../utils/projects";
+import { Project } from "../../utils/data-objects";
 type FeaturedSectionProps = {
   projects: Project[];
 };

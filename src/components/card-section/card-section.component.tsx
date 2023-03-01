@@ -8,7 +8,7 @@ import Card from "../card/card.component";
 import { CardSectionContainer } from "./card-section.styles";
 
 // types
-import { Service } from "../../utils/services";
+import { Service } from "../../utils/data-objects";
 type CardSectionProps = {
   services: Service[];
 };

@@ -8,11 +8,12 @@ import {
 } from "./background-image.styles";
 
 // types
-import { Image } from "../../utils/images";
+import { Image } from "../../utils/data-objects";
 type BackgroundImageProps = {
   image: Image;
 };
 
+// component
 const BackgroundImage: FC<BackgroundImageProps> = ({image}) => {
   return (
     <BackgroundImageContainer>

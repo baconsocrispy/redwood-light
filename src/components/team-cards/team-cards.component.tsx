@@ -8,7 +8,7 @@ import TeamCard from "../team-card/team-card.component";
 import { CardSectionContainer } from "../card-section/card-section.styles";
 
 // types
-import { Bio } from "../../utils/team";
+import { Bio } from "../../utils/data-objects";
 
 type CardSectionProps = {
   bios: Bio[];

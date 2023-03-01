@@ -1,14 +1,15 @@
 export const ThemeStyles = {
   breakpoints: { 
-    xsmall: "350px",
-    small: "500px",
-    medium: "700px",
-    large: "835px",
+    xsmall: "21.875em", // 350px
+    small: "31.25em", // 500px
+    medium: "43.75em", // 700px
+    large: "52.1875em", // 835px
   },
   colors: {
+    black: "rgb(50, 50, 50)",
+    green: 'green',
     redwoodRed: "rgb(142, 36, 12)",
     white: "#fff",
-    black: "rgb(50, 50, 50)",
   },
   fonts: {
     primary: "Montserrat",

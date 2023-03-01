@@ -8,7 +8,7 @@ import AwardsProject from "../awards-project/awards-project.component";
 import { FeaturedAwardsContainer } from "./featured-awards.styles";
 
 // types
-import { Project } from "../../utils/projects";
+import { Project } from "../../utils/data-objects";
 type FeaturedAwardsProps = {
   projects: Project[];
 };

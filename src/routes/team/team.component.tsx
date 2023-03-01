@@ -5,8 +5,8 @@ import TeamCards from "../../components/team-cards/team-cards.component";
 import { TeamSectionHeader } from "./team.styles";
 
 // api
-import { Schematics } from "../../utils/services";
-import { TeamBios } from "../../utils/team";
+import { Schematics } from "../../utils/data-objects";
+import { TeamBios } from "../../utils/data-objects";
 
 const Team = () => {
   const bgImage2 = Schematics[1].image;

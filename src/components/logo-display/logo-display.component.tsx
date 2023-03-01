@@ -10,7 +10,7 @@ import {
 } from "./logo-display.styles";
 
 // types
-import { Image } from "../../utils/images";
+import { Image } from "../../utils/data-objects";
 type LogoDisplayProps = {
   logos: Image[];
 };

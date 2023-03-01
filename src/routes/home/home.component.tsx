@@ -9,10 +9,13 @@ import { ContactButton } from "../../components/contact-button/contact-button.co
 import FeaturedSection from "../../components/featured-static/featured-static.component";
 
 // api
-import { HeroImages } from "../../utils/images";
-import { ClientLogos } from "../../utils/logos";
-import { Services, Schematics } from "../../utils/services";
-import { Projects } from "../../utils/projects";
+import { 
+  ClientLogos, 
+  HeroImages, 
+  Projects, 
+  Services, 
+  Schematics 
+} from "../../utils/data-objects";
 
 // assets
 import { HomeHeaderCopy } from "../../components/text-section/copy/copy";

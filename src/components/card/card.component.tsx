@@ -2,7 +2,7 @@
 import { FC } from "react";
 
 // types
-import { Service } from "../../utils/services";
+import { Service } from "../../utils/data-objects";
 import {
   CardButton,
   CardContainer,
