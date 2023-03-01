@@ -18,7 +18,7 @@ const HamburgerMenu: FC<HamburgerMenuProps> = ({ menuItems }) => {
       <Menu open={ open }>
         { menuItems.map((item, index) => (
           <MenuItem key={ index }>
-            <MenuLink to={ item }>{ item }</MenuLink>
+            <MenuLink to={ item.toLowerCase() }>{ item }</MenuLink>
           </MenuItem>
         ))}
       </Menu>

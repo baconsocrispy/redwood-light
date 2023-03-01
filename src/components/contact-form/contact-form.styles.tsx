@@ -2,7 +2,7 @@ import styled from "styled-components";
 import ThemeStyles from "../../utils/theme.styles";
 
 const { fontSizes, fonts, colors, breakpoints } = ThemeStyles;
-// test
+
 export const ContactFormContainer = styled.div`
   display: flex;
   align-items: center;
