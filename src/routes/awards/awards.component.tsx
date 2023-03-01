@@ -8,6 +8,7 @@ import {
   AwardsHeaderCopy 
 } from "../../components/text-section/copy/copy"
 
+// component
 const Awards = () => {
   return (
     <PageSection>
