@@ -3,7 +3,7 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 
-// internal importss
+// internal imports
 import App from "./App";
 
 // create root DOM element
