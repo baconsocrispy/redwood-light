@@ -24,13 +24,9 @@ export const LogoDisplayHeader = styled.h2`
   text-transform: uppercase;
   font-family: ${fonts.secondary};
   color: ${colors.black};
-  font-size: ${fontSizes.mobileSectionHeader};
+  font-size: ${fontSizes.sectionHeader};
   text-align: center;
   margin-bottom: 1rem;
-
-  @media (min-width: ${breakpoints.medium}) {
-    font-size: ${fontSizes.sectionHeader }
-  }
 `
 
 export const LogoContainer = styled.div`

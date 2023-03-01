@@ -30,8 +30,6 @@ const FeaturedSection: FC<FeaturedSectionProps> = ({ projects }) => {
           <FeaturedProject project={ project } key={ project.id } />
         )}
       </FeaturedProjectsContainer>
-
-      <FeaturedHeader>Our Clients</FeaturedHeader>
     </>
   );
 };

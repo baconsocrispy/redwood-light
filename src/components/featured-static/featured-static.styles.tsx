@@ -17,6 +17,7 @@ export const FeaturedProjectsContainer = styled.div`
 export const FeaturedHeader = styled.h2`
   width: 95%;
   text-align: center;
+  text-transform: uppercase;
   font-family: ${fonts.secondary};
   font-size: ${fontSizes.sectionHeader};
   color: ${colors.black};
