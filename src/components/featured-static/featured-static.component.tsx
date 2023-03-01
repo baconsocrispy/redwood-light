@@ -19,8 +19,6 @@ type FeaturedSectionProps = {
 
 // component
 const FeaturedSection: FC<FeaturedSectionProps> = ({ projects }) => {
-
-
   return (
     <>
       <FeaturedHeader>Featured Projects</FeaturedHeader>

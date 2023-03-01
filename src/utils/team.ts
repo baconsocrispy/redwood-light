@@ -1,11 +1,11 @@
 // image imports
+import Steve from "../assets/images/team/steve.png";
 import Erik from "../assets/images/team/erik.png";
 import Danny from "../assets/images/team/danny.png";
-import Light from '../components/spinner/svg/light.svg';
+import David from "../assets/images/team/david.png";
 
-
+// types
 import { Image } from "./images";
-
 export type Bio = {
   id: number;
   name: string;
@@ -22,7 +22,7 @@ export const TeamBios: Bio[] = [
     image: {
       id: 39,
       name: "Steve Mulkey",
-      src: Light,
+      src: Steve,
       alt: "Steve Mulkey - Co-Owner / Business Development, Redwood Light",
     },
     bio: `For more than 20 years, Steve has been at the forefront of 
@@ -90,7 +90,7 @@ export const TeamBios: Bio[] = [
     image: {
       id: 42,
       name: "David Polcyn",
-      src: Light,
+      src: David,
       alt: "David Polcyn - Project Coordinator / Designer, Redwood Light",
     },
     bio: `David has been involved in theatrical and television lighting for over 

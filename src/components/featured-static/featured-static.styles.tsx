@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import ThemeStyles from "../../utils/theme.styles";
-import { slideInLeft } from "../../utils/animations";
 
 const { colors, fonts, fontSizes, breakpoints } = ThemeStyles;
 
@@ -13,7 +12,6 @@ export const FeaturedProjectsContainer = styled.div`
   gap: 5rem 5rem;
   justify-content: space-evenly;
   transition: all 0.7s ease-in-out;
-  animation: ${slideInLeft} 0.7s ease-in-out;
 `;
 
 export const FeaturedHeader = styled.h2`
