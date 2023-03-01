@@ -10,11 +10,11 @@ export const FooterContainer = styled.footer`
   align-items: center;
   justify-content: space-between;
   
-  background-color: ${colors.redwoodRed};
+  background-color: ${ colors.redwoodRed };
 
-  color: ${colors.white};
-  font-size: ${fontSizes.copy};
-  font-family: ${fonts.primary};
+  color: ${ colors.white  };
+  font-size: ${ fontSizes.copy };
+  font-family: ${ fonts.primary };
   text-align: center;
 `
 
@@ -36,11 +36,6 @@ export const FooterLink = styled(Link)`
   &:visited {
     color: currentColor;
   }
-
-  &:hover,
-  &:active {
-    transform: skewX(-15deg);
-  }
 `
 
 export const FooterAnchor = styled.a`
@@ -52,15 +47,10 @@ export const FooterAnchor = styled.a`
   &:visited {
     color: currentColor;
   }
-
-  &:hover,
-  &:active {
-    transform: skewX(-15deg);
-  }
 `
 
 export const Copyright = styled.div`
-  font-size: ${fontSizes.mobileCopy};
+  font-size: ${ fontSizes.mobileCopy };
   transform: skewX(-15deg);
   margin-bottom: 2rem;
 `
