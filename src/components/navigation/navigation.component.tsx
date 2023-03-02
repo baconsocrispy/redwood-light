@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 
 // internal imports
 import { Outlet } from "react-router-dom";
-import RedwoodLogo from "../../assets/images/logo.v1.png";
 import HamburgerMenu from "../hamburger/hamburger.component";
 
 // styles
