@@ -7,8 +7,8 @@ type BreadcrumbCircleProps = {
 
 export const BreadcrumbCircle = styled.div<BreadcrumbCircleProps>`
   display: inline-block;
-  width: .5rem;
-  height: .5rem;
+  width: 1rem;
+  height: 1rem;
   border-radius: 50%;
   background-color: ${ (props) => props.active ? Colors.white : 'none' };
   outline: 1px solid ${ Colors.white };
