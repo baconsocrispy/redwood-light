@@ -13,8 +13,8 @@ export const Colors = {
 };
 
 export const Fonts = {
-  primary: "Montserrat",
-  secondary: "Roboto",
+  primary: "Montserrat, sans-serif",
+  secondary: "Roboto, sans-serif",
 };
 
 export const FontSizes = {

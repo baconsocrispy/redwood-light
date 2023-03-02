@@ -101,21 +101,8 @@ Using it here to handle slideshow image transitions.
 add the types:
 `yarn add @types/react-transition-group --dev --save`
 
-## SCREEN QUERY METHODS
-Command: 
-get - expect element to be in DOM
-query - expect element not to be in DOM
-find - expect element to appear async
+## NETLIFY SETUP
+Need to add a `_resources` file to the public folder with the following line to
+prevent 404 not found errors when reloading sub routes.
 
-[All]
-* (exclude) expect only one match
-* (include) expect more than one match
-
-QueryType:
-Role (most preferred)
-AltText (images)
-Text (display elements)
-Form Elements
--PlaceholderText
--LabelText
--DisplayValue
+* `/* /index.html`
