@@ -38,3 +38,6 @@ export const Steve = urlPrefix + "team/steve.png";
 export const Erik = urlPrefix + "team/erik.png";
 export const Danny = urlPrefix + "team/danny.png";
 export const David = urlPrefix + "team/david.png";
+
+// emmy image
+export const EmmyAward = urlPrefix + 'awards/emmy.png';

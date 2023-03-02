@@ -276,34 +276,13 @@ export const Schematics: Service[] = [
 
 // team bios array
 export const TeamBios: Bio[] = [
+
   {
     id: 0,
-    name: 'Steve Mulkey',
-    position: 'Co-Owner / Business Development',
-    image: {
-      id: 39,
-      name: "Steve Mulkey",
-      src: Assets.Steve,
-      alt: "Steve Mulkey - Co-Owner / Business Development, Redwood Light",
-    },
-    bio: `For more than 20 years, Steve has been at the forefront of 
-      providing consulting, design, and integration services to broadcast, 
-      production, and corporate studios across the world. During his time 
-      with Redwood Media Group, he played a significant role in the 
-      transition from traditional incandescent and fluorescent studio lighting 
-      to the innovative LED lighting technology. Thanks to his vision and 
-      expertise, Redwood Light was twice recognized with Emmy Awards for 
-      Lighting Design under his leadership. Steve's pioneering work in the 
-      field has helped to transform the industry, making him a respected figure 
-      and a valuable asset to any lighting project.
-    `
-  },
-  {
-    id: 1,
     name: 'Erik Rodgers',
     position: 'Co-Owner / Director of Operations',
     image: {
-      id: 40,
+      id: 39,
       name: "Erik Rodgers",
       src: Assets.Erik,
       alt: "Erik Rodgers - Co-Owner / Director of Operations, Redwood Light",
@@ -320,6 +299,28 @@ export const TeamBios: Bio[] = [
       Thursday Night Football in the broadcast industry. In 2014, he joined the 
       Redwood Media group as a freelancer, ultimately taking over as director of 
       lighting operations and founding REDWOOD LIGHT in 2022.
+    `
+  },
+  {
+    id: 1,
+    name: 'Steve Mulkey',
+    position: 'Co-Owner / Business Development',
+    image: {
+      id: 40,
+      name: "Steve Mulkey",
+      src: Assets.Steve,
+      alt: "Steve Mulkey - Co-Owner / Business Development, Redwood Light",
+    },
+    bio: `For more than 20 years, Steve has been at the forefront of 
+      providing consulting, design, and integration services to broadcast, 
+      production, and corporate studios across the world. During his time 
+      with Redwood Media Group, he played a significant role in the 
+      transition from traditional incandescent and fluorescent studio lighting 
+      to the innovative LED lighting technology. Thanks to his vision and 
+      expertise, Redwood Light was twice recognized with Emmy Awards for 
+      Lighting Design under his leadership. Steve's pioneering work in the 
+      field has helped to transform the industry, making him a respected figure 
+      and a valuable asset to any lighting project.
     `
   },
   {

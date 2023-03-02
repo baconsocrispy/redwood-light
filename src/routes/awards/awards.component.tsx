@@ -10,12 +10,19 @@ import {
   AwardsHeaderCopy 
 } from "../../components/text-section/copy/copy"
 import { AwardsProjects, Schematics } from "../../utils/data-objects"
+import { EmmyAward } from "../../utils/assets"
+
+// styles
+import { Emmy, EmmyContainer } from "./awards.styles"
 
 
 // component
 const Awards = () => {
   return (
     <PageSection>
+      <EmmyContainer>
+        <Emmy src={ EmmyAward} />
+      </EmmyContainer>
       <TextSection 
         headerText={ AwardsHeaderCopy } 
         bodyText={ AwardsBodyCopy} 
