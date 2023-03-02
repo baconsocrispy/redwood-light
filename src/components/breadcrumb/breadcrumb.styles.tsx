@@ -10,7 +10,7 @@ export const BreadcrumbCircle = styled.div<BreadcrumbCircleProps>`
   width: 5px;
   height: 5px;
   background-color: ${ (props) => props.active ? Colors.white : 'none' };
-  outline: 1px solid ${ Colors.white };
+  border: 1px solid ${ Colors.white };
   border-radius: 50%;
 
   &:not(:last-child) {
